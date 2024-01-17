@@ -1,6 +1,6 @@
 /**
 * Template Name: Restaurantly
-* Updated: Sep 20 2023 with Bootstrap v5.3.2
+* Updated: Jan 09 2024 with Bootstrap v5.3.2
 * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -134,12 +134,12 @@ h6 {
 
 #topbar .contact-info i {
   font-style: normal;
-  color: #d9ba85;
+  color: #fdb4b4;
 }
 
 #topbar .contact-info i span {
   padding-left: 5px;
-  color: #fff;
+  color: #8b8b8b;
 }
 
 #topbar .languages ul {
@@ -148,11 +148,11 @@ h6 {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #cda45e;
+  color: #e2baba;
 }
 
 #topbar .languages ul a {
-  color: white;
+  color: rgb(180, 180, 180);
 }
 
 #topbar .languages ul li+li {
@@ -170,18 +170,19 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: rgba(12, 11, 9, 0.6);
-  border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+  background:rgba(165, 165, 165, 0.301);
+  border-bottom: 1px solid rgba(165, 165, 165, 0.301);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
   top: 40px;
+  
 }
 
 #header.header-scrolled {
   top: 0;
-  background: rgba(0, 0, 0, 0.85);
-  border-bottom: 1px solid #37332a;
+  background: rgba(255, 231, 231, 0.425);
+  border-bottom: 1px solid #e4cccc98;
 }
 
 #header .logo {
@@ -208,7 +209,7 @@ h6 {
 --------------------------------------------------------------*/
 .book-a-table-btn {
   margin: 0 0 0 15px;
-  border: 2px solid #cda45e;
+  border: 2px solid #e0bfbed8;
   color: #fff;
   border-radius: 50px;
   padding: 8px 25px;
@@ -220,8 +221,8 @@ h6 {
 }
 
 .book-a-table-btn:hover {
-  background: #cda45e;
-  color: #fff;
+  background: #e2bcbc;
+  color: #d4d4d4;
 }
 
 @media (max-width: 992px) {
