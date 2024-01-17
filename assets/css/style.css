@@ -1,6 +1,6 @@
 /**
 * Template Name: Restaurantly
-* Updated: Sep 20 2023 with Bootstrap v5.3.2
+* Updated: Jan 09 2024 with Bootstrap v5.3.2
 * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -170,12 +170,13 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: rgba(12, 11, 9, 0.6);
-  border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+  background:rgba(253, 233, 231, 0.589);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.76);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
   top: 40px;
+  
 }
 
 #header.header-scrolled {
