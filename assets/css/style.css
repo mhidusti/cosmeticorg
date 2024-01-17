@@ -11,17 +11,17 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  background: #0c0b09;
+  background: #3f3f3f;
   color: #fff;
 }
 
 a {
-  color: #cda45e;
+  color: #c9aaaa;
   text-decoration: none;
 }
 
 a:hover {
-  color: #d9ba85;
+  color: #f1b9b9;
   text-decoration: none;
 }
 
@@ -54,8 +54,8 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #1a1814;
-  border-top-color: #cda45e;
-  border-bottom-color: #cda45e;
+  border-top-color: #b18484;
+  border-bottom-color: #b18484;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -86,17 +86,17 @@ h6 {
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
-  border: 2px solid #cda45e;
+  border: 2px solid #c29d9d;
 }
 
 .back-to-top i {
   font-size: 28px;
-  color: #cda45e;
+  color: #e7a1a1;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #cda45e;
+  background: #858585;
   color: #1a1814;
 }
 
@@ -260,7 +260,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  color: #fff;
+  color: #ffffffcc;
   white-space: nowrap;
   transition: 0.3s;
   font-size: 14px;
@@ -277,7 +277,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #d9ba85;
+  color: #c4a2a2;
 }
 
 .navbar .dropdown ul {
@@ -290,7 +290,7 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: #d6c7c7ea;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
   border-radius: 4px;
@@ -312,7 +312,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #cda45e;
+  color: #58505098;
 }
 
 .navbar .dropdown:hover>ul {
@@ -487,12 +487,12 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
 #hero h1 span {
-  color: #cda45e;
+  color: #cc9c9c;
 }
 
 #hero h2 {
@@ -517,12 +517,12 @@ h6 {
   transition: 0.3s;
   line-height: 1;
   color: white;
-  border: 2px solid #cda45e;
+  border: 2px solid #d4a1a1;
 }
 
 #hero .btn-menu:hover,
 #hero .btn-book:hover {
-  background: #cda45e;
+  background: #c59e9e;
   color: #fff;
 }
 
@@ -533,7 +533,7 @@ h6 {
 #hero .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
+  background: radial-gradient(#bda8a8 50%, rgba(161, 161, 161, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -567,14 +567,14 @@ h6 {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(205, 164, 94, 0.7);
+  border: 5px solid rgba(182, 155, 155, 0.795);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
 }
 
 #hero .play-btn:hover::after {
-  border-left: 15px solid #cda45e;
+  border-left: 15px solid #c0a1a1;
   transform: scale(20);
 }
 
@@ -651,7 +651,7 @@ section {
 }
 
 .section-bg {
-  background-color: #1a1814;
+  background-color: #5a5a5abe;
 }
 
 .section-title {
@@ -675,7 +675,7 @@ section {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(167, 154, 154, 0.2);
   margin: 4px 10px;
 }
 
@@ -685,7 +685,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   font-family: "Playfair Display", serif;
-  color: #cda45e;
+  color: #b98e8e;
 }
 
 /*--------------------------------------------------------------
@@ -693,7 +693,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #1d1b16;
+  background: #636262e7;
   margin-top: 110px;
 }
 
@@ -724,7 +724,7 @@ section {
 .breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #37332a;
+  color: #a8a4a4;
   content: "/";
 }
 
@@ -754,7 +754,7 @@ section {
 
 .about:before {
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(59, 57, 57, 0.534);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -775,27 +775,28 @@ section {
 
 .about .about-img::before {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left:10px;
+  top: 5px;
   width: 60px;
   height: 60px;
   z-index: 1;
   content: "";
-  border-left: 5px solid #cda45e;
-  border-top: 5px solid #cda45e;
+  border-left: 5px solid #e9b8b8;
+  border-top: 5px solid #e9b8b8;
   transition: 0.5s;
 }
 
 .about .about-img::after {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  
+  left:490px;
+  bottom: 8px;
   width: 60px;
   height: 60px;
   z-index: 2;
   content: "";
-  border-right: 5px solid #cda45e;
-  border-bottom: 5px solid #cda45e;
+  border-right: 5px solid #e9b8b8;
+  border-bottom: 5px solid #e9b8b8;
   transition: 0.5s;
 }
 
@@ -834,7 +835,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cda45e;
+  color: #b39d9d;
 }
 
 .about .content p:last-child {
@@ -852,16 +853,16 @@ section {
 --------------------------------------------------------------*/
 .why-us .box {
   padding: 50px 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.938);
   transition: all ease-in-out 0.3s;
-  background: #1a1814;
+  background: #ffcacaa9;
 }
 
 .why-us .box span {
   display: block;
   font-size: 28px;
   font-weight: 700;
-  color: #cda45e;
+  color: #d6b2b2;
 }
 
 .why-us .box h4 {
@@ -873,14 +874,14 @@ section {
 }
 
 .why-us .box p {
-  color: #aaaaaa;
+  color: #c5c1c1;
   font-size: 15px;
   margin: 0;
   padding: 0;
 }
 
 .why-us .box:hover {
-  background: #cda45e;
+  background: #e2c3c391;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -909,7 +910,7 @@ section {
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
-  color: #fff;
+  color: #bebebe;
   margin-bottom: 10px;
   transition: all ease-in-out 0.3s;
   border-radius: 50px;
@@ -918,7 +919,7 @@ section {
 
 .menu #menu-flters li:hover,
 .menu #menu-flters li.filter-active {
-  color: #cda45e;
+  color: #daa9a9;
 }
 
 .menu #menu-flters li:last-child {
@@ -966,7 +967,7 @@ section {
 }
 
 .menu .menu-content a:hover {
-  color: #cda45e;
+  color: #c9a1a1;
 }
 
 .menu .menu-content span {
@@ -975,7 +976,7 @@ section {
   z-index: 3;
   padding: 0 10px;
   font-weight: 600;
-  color: #cda45e;
+  color: #aa8f8f;
 }
 
 .menu .menu-ingredients {
@@ -1003,23 +1004,23 @@ section {
   transition: 0.3s;
   color: #fff;
   border-radius: 0;
-  border-right: 2px solid #cda45e;
+  border-right: 2px solid #ad9292;
   font-weight: 600;
   font-size: 15px;
 }
 
 .specials .nav-link:hover {
-  color: #cda45e;
+  color: #c4abab;
 }
 
 .specials .nav-link.active {
   color: #1a1814;
-  background: #cda45e;
-  border-color: #cda45e;
+  background: #c59c9c;
+  border-color: #8d8d8d;
 }
 
 .specials .nav-link:hover {
-  border-color: #cda45e;
+  border-color: #cfcfcf;
 }
 
 .specials .tab-pane.active {
@@ -1082,7 +1083,7 @@ section {
 }
 
 .events .events-carousel {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(173, 173, 173, 0.08);
   padding: 30px;
 }
 
@@ -1093,7 +1094,7 @@ section {
 .events .event-item h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #cda45e;
+  color: #ca9797;
 }
 
 .events .event-item .price {
@@ -1104,7 +1105,7 @@ section {
 }
 
 .events .event-item .price span {
-  border-bottom: 2px solid #cda45e;
+  border-bottom: 2px solid #ffb3b3;
 }
 
 .events .event-item ul {
@@ -1119,7 +1120,7 @@ section {
 .events .event-item ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #cda45e;
+  color: #ffbcbc;
 }
 
 .events .event-item p:last-child {
@@ -1139,7 +1140,7 @@ section {
 }
 
 .events .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #cda45e;
+  background-color: #ffa2a2;
 }
 
 /*--------------------------------------------------------------
@@ -1155,7 +1156,7 @@ section {
 
 .book-a-table .php-email-form .validate {
   display: none;
-  color: red;
+  color: rgb(255, 181, 181);
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;
@@ -1164,7 +1165,7 @@ section {
 .book-a-table .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: #ffadad;
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -1196,7 +1197,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #cda45e;
+  border: 3px solid #cc8c8c;
   border-top-color: #1a1814;
   animation: animate-loading 1s linear infinite;
 }
@@ -1223,7 +1224,7 @@ section {
 
 .book-a-table .php-email-form input:focus,
 .book-a-table .php-email-form textarea:focus {
-  border-color: #cda45e;
+  border-color: #e0a8a8;
 }
 
 .book-a-table .php-email-form input {
@@ -1235,7 +1236,7 @@ section {
 }
 
 .book-a-table .php-email-form button[type=submit] {
-  background: #cda45e;
+  background: #e0a8a8;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1244,7 +1245,7 @@ section {
 }
 
 .book-a-table .php-email-form button[type=submit]:hover {
-  background: #d3af71;
+  background: #e0a8a8;
 }
 
 /*--------------------------------------------------------------
@@ -1284,7 +1285,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #d3af71;
+  color: #ffa9a9;
   font-size: 26px;
 }
 
@@ -1325,7 +1326,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #cda45e;
+  background-color: #ffc2c2;
 }
 
 /*--------------------------------------------------------------
@@ -1406,7 +1407,7 @@ section {
 }
 
 .chefs .member .social a:hover {
-  color: #cda45e;
+  color: #ffb9b9;
 }
 
 .chefs .member .social i {
@@ -1442,7 +1443,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #cda45e;
+  background: #ddbbbb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1481,7 +1482,7 @@ section {
 
 .contact .php-email-form .validate {
   display: none;
-  color: red;
+  color: rgb(230, 195, 195);
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;
@@ -1490,7 +1491,7 @@ section {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: #dbb8b8;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1518,7 +1519,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #cda45e;
+  border: 3px solid #d19a98;
   border-top-color: #1a1814;
   animation: animate-loading 1s linear infinite;
 }
@@ -1545,7 +1546,7 @@ section {
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: #cda45e;
+  border-color: #e7a3a3;
 }
 
 .contact .php-email-form input {
@@ -1557,7 +1558,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #cda45e;
+  background: #e2a3a3;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1566,7 +1567,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #d3af71;
+  background: #adacaa;
 }
 
 @keyframes animate-loading {
@@ -1634,7 +1635,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #cda45e;
+  background: #eca2a2;
   color: #fff;
   text-decoration: none;
 }
@@ -1659,7 +1660,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #cda45e;
+  color: #ffc3c3;
   font-size: 18px;
   line-height: 1;
 }
@@ -1682,7 +1683,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #cda45e;
+  color: #eb9393;
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1711,14 +1712,14 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px 2px 20px;
-  background: #cda45e;
+  background: #d39696;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
 }
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: #d3af71;
+  background: #7e7e7e;
 }
 
 #footer .copyright {
