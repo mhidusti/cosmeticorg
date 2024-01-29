@@ -902,7 +902,14 @@ section {
   width: 300px;
   height:180px;
 }
-.img-fluid1{width: 270px;}
+.img-fluid{width: 500px;}
+
+.img-fluid{height: 400px;}
+
+
+.img-fluid2{
+  width: 300px;
+}
 
 /*--------------------------------------------------------------
 # Menu Section
@@ -1279,14 +1286,14 @@ section {
   margin: -40px 0 0 40px;
   position: relative;
   z-index: 2;
-  border: 6px solid rgba(255, 255, 255, 0.2);
+  border: 6px solid rgba(112, 112, 112, 0.774);
 }
 
 .testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 45px;
-  color: white;
+  color: rgb(230, 163, 163);
 }
 
 .testimonials .testimonial-item h4 {
@@ -1318,7 +1325,7 @@ section {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #26231d;
+  background: #ebbcb5c5;
   position: relative;
   border-radius: 6px;
   position: relative;
@@ -1351,13 +1358,21 @@ section {
 }
 
 .gallery .gallery-item img {
-  transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.5s;
 }
 
 .gallery .gallery-item:hover img {
   transform: scale(1.1);
 }
+.gallery .gallery-item{
+  border-radius: 7px;
+}
 
+
+img-fluid{
+  max-width: 100%;
+  height: 300px;
+}
 /*--------------------------------------------------------------
 # Chefs
 --------------------------------------------------------------*/
