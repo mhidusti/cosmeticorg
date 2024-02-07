@@ -5,9 +5,9 @@ from .models import *
 from django.views.generic import ListView
 from .cart import Cart
 
-class HomeView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request,'root/index.html')
+# class HomeView(View):
+#     def get(self, request, *args, **kwargs):
+#         return render(request,'root/index.html')
         
 
 
@@ -44,28 +44,28 @@ class HomeView(View):
 
 
 
-# def home(request):
-#     if request.method == 'GET':
-#         category = Category.objects.all()
-#         Productfeature = Product_Feature.objects.filter(status = True)
-#         Bestproducts = Best_Products.objects.filter(status = True)
-#         Products = Products.objects.filter(status = True)
-#         Special = Special_Products.objects.filter(status = True)
-#         Pack = Pack_Products.objects.filter(status = True)
-#         Gallery = Gallery.objects.all()
-#         Social= Social.objects.filter(status = True)
-#         context = {
-#              'category': Category,
-#              'pf': Product_Feature,
-#              'bp': Best_Products,
-#              'Products': Products,
-#              'Special': Special_Products,
-#              'Pack': Pack_Products,
-#              'Gallery': Gallery,
-#              'Social': Social,
+def home(request):
+    if request.method == 'GET':
+        category = Category.objects.all()
+        productFeature = Product_Feature.objects.filter(status = True)
+        bestproducts = Best_Products.objects.filter(status = True)
+        products = Products.objects.filter(status = True)
+        special = Special_Products.objects.filter(status = True)
+        pack = Pack_Products.objects.filter(status = True)
+        gallery = Gallery.objects.all()
+        social= Social.objects.filter(status = True)
+        context = {
+             'category': category,
+             'pf': productFeature,
+             'bp': bestproducts,
+             'products': products,
+             'special': special,
+             'pack': pack,
+             'gallery': gallery,
+             'social': social,
             
-#             }
-#         return render(request,"root/index.html",context=context)
+            }
+    return render(request,"root/index.html",context=context)
 
 #     elif request.method == 'POST':
 #         form = ContactUsForm(request.POST)
