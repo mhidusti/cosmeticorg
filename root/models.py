@@ -65,17 +65,17 @@ class Pack_Products(models.Model):
     def __str__(self):
         return self.title
 
-class OrderForm(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone = models.CharField(max_length=15)
-    number= models.IntegerField()
-    message = models.TextField()
-    date = models.DateTimeField()
-    time= models.DateTimeField()
+# class Order(models.Model):
+#     name = models.CharField(max_length=100)
+#     email = models.EmailField()
+#     phone = models.CharField(max_length=15)
+#     number= models.IntegerField()
+#     message = models.TextField()
+#     date = models.DateTimeField()
+#     time= models.DateTimeField()
 
-    def __str__(self):
-        return self.email
+#     def __str__(self):
+#         return self.email
     
 class Gallery(models.Model):
     image = models.ImageField(upload_to='Gallery')
@@ -84,7 +84,7 @@ class Gallery(models.Model):
     class Meta:
         ordering = ['-created_date']
     
-class CommentForm(models.Model):
+class Comment(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     subject = models.CharField(max_length=100)
@@ -110,7 +110,7 @@ class Social(models.Model):
     class Meta:
         ordering = ['-created_date']
 
-class ContactUsForm(models.Model):
+class ContactUs(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     subject = models.CharField(max_length=200)

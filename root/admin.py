@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ContactUsForm, OrderForm, CommentForm, Social, Gallery, Pack_Products, Special_Products, Products,Best_Products,  Product_Feature, Category 
+from .models import *
 
 
 class AdminServices(admin.ModelAdmin):
@@ -8,9 +8,8 @@ class AdminServices(admin.ModelAdmin):
     list_filter = ['status']
     search_fields = ['title']
 
-admin.site.register(ContactUsForm)
-admin.site.register(OrderForm)
-admin.site.register(CommentForm)
+admin.site.register(ContactUs)
+admin.site.register(Comment)
 admin.site.register(Social)
 admin.site.register(Gallery)
 admin.site.register(Pack_Products)
