@@ -30,6 +30,7 @@ def home(request):
             
             }
         return render(request,"root/index.html",context=context)
+   
     
 
 
