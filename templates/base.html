@@ -69,8 +69,8 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About product</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'root:home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'root:about' %}">About product</a></li>
           <li><a class="nav-link scrollto" href="#menu">Comestic</a></li>
           <li><a class="nav-link scrollto" href="#specials">New</a></li>
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
@@ -93,7 +93,7 @@
               <li><a href="#">OFF</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'root:contact' %}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

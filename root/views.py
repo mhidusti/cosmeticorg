@@ -9,30 +9,41 @@ from .cart import Cart
 
 
 def home(request):
-    if request.method == 'GET':
-        category = Category.objects.all()
-        productFeature = Product_Feature.objects.filter(status = True)
-        bestproducts = Best_Products.objects.filter(status = True)
-        products = Products.objects.filter(status = True)
-        special = Special_Products.objects.filter(status = True)
-        pack = Pack_Products.objects.filter(status = True)
-        gallery = Gallery.objects.all()
-        social= Social.objects.filter(status = True)
-        context = {
-             'category': category,
-             'pf': productFeature,
-             'bp': bestproducts,
-             'products': products,
-             'special': special,
-             'pack': pack,
-             'gallery': gallery,
-             'social': social,
+    # if request.method == 'GET':
+    #     category = Category.objects.all()
+    #     productFeature = Product_Feature.objects.filter(status = True)
+    #     bestproducts = Best_Products.objects.filter(status = True)
+    #     products = Products.objects.filter(status = True)
+    #     special = Special_Products.objects.filter(status = True)
+    #     pack = Pack_Products.objects.filter(status = True)
+    #     gallery = Gallery.objects.all()
+    #     social= Social.objects.filter(status = True)
+    #     context = {
+    #          'category': category,
+    #          'pf': productFeature,
+    #          'bp': bestproducts,
+    #          'products': products,
+    #          'special': special,
+    #          'pack': pack,
+    #          'gallery': gallery,
+    #          'social': social,
             
-            }
-        return render(request,"root/index.html",context=context)
-   
-    
+    #         }
+    return render(request,"root/index.html")
 
+def about (request):
+    return render(request,"root/about.html")
+
+
+
+
+def contact(request):
+   return render(request,"root/contact.html")
+
+
+
+def social(request):
+    return redirect('root:social')
 
 
 
