@@ -11,7 +11,11 @@ urlpatterns = [
     path("product",product,name="product"),
     path("detail",detail,name="detail"),
     # path("trainer",trainer,name="trainer"),
-    # path('api/V1/', include('restaurant.api.V1.urls')),
+
 ]
+
+
+
+
 
 
