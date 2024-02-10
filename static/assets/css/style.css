@@ -874,7 +874,7 @@ section {
 
 
 .why-us .box {
-  padding: 50px 30px;
+  padding: 10px 30px;
   width: 390px;
   margin-top: 60px;
   height: 470px;
@@ -899,7 +899,10 @@ section {
   margin: 20px 0;
   color: rgba(255, 255, 255, 0.8);
 }
+.why-us .box h4:hover{
 
+  background-color: #9999998c;
+}
 .why-us .box p {
   color: #c5c1c1;
   font-size: 15px;
@@ -911,6 +914,7 @@ section {
   background: #e2c3c391;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+
 }
 
 .why-us .box:hover span,
