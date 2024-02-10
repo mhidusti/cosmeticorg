@@ -34,7 +34,8 @@ def home(request):
 def about (request):
     return render(request,"root/about.html")
 
-
+def product(request):
+    return render(request, "root/product.html")
 
 
 def contact(request):
