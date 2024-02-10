@@ -37,6 +37,9 @@ def about (request):
 def product(request):
     return render(request, "root/product.html")
 
+def detail(request):
+    return render(request, "root/detail.html")
+
 
 def contact(request):
    return render(request,"root/contact.html")
