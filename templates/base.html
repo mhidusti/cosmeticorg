@@ -73,10 +73,11 @@
           <li><a class="nav-link scrollto" href="{% url 'root:about' %}">About product</a></li>
           <li><a class="nav-link scrollto" href="#menu">Comestic</a></li>
           <li><a class="nav-link scrollto" href="#specials">New</a></li>
-          <li><a class="nav-link scrollto" href="#events">Events</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'root:detail' %}">detail</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Celebrity</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Discover</a></li>
-          <li class="dropdown"><a href="#"><span>Product</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="{% url 'root:product' %}"><span>Product</span> <i class="bi bi-chevron-down"></i></a>
+         
             <ul>
               <li><a href="#">SKIN</a></li>
               <li class="dropdown"><a href="#"><span>COSMETIC</span> <i class="bi bi-chevron-right"></i></a>
