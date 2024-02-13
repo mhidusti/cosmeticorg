@@ -641,6 +641,25 @@ h6 {
     opacity: 0;
   }
 }
+.col {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -864,7 +883,7 @@ section {
 }
 .lol::before{
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 187, 187, 0.603);
   position: absolute;
   bottom: 0;
   top: 0;
