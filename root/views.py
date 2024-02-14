@@ -3,7 +3,7 @@ from django.views import View
 from .models import *
 # from django.contrib import messages
 from django.views.generic import ListView,TemplateView,DetailView
-from .cart import Cart
+
 
 
 
@@ -34,11 +34,7 @@ def home(request):
 def about (request):
     return render(request,"root/about.html")
 
-def product(request):
-    return render(request, "root/product.html")
 
-def detail(request):
-    return render(request, "root/detail.html")
 
 
 def contact(request):
