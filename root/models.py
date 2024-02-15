@@ -1,11 +1,6 @@
 from django.db import models
-# from accounts.models import CustomeUser
-# Create your models here.
 
-class Category(models.Model):
-    name = models.CharField(max_length=100)
-    def __str__(self):
-        return self.name
+
 
 class Product_Feature(models.Model):
     title = models.CharField(max_length=200)
@@ -25,45 +20,32 @@ class Best_Products(models.Model):
     def __str__(self):
         return self.title
 
-class Products(models.Model):
-    category = models.ManyToManyField(Category)
-    image = models.ImageField(upload_to='Products')
-    title = models.CharField(max_length=100)
-    content = models.CharField(max_length=200)
-    attributes = models.CharField(max_length=200)
-    price = models.IntegerField(default=0)
-    status = models.BooleanField(default=False)
-    created_date = models.DateTimeField(auto_now_add=True)
-    class Meta:
-        ordering = ['-created_date']
-    def __str__(self):
-        return self.title
 
-class Special_Products(models.Model):
-    image = models.ImageField(upload_to='Special_Products',default='MenuSpecials.jpg')
-    title = models.CharField(max_length=100)
-    content = models.CharField(max_length=200)
-    content2 = models.CharField(max_length=200)
-    category = models.ManyToManyField(Category)
-    status = models.BooleanField(default=False)
-    created_date = models.DateTimeField(auto_now_add=True)
-    class Meta:
-        ordering = ['-created_date']
+# class Special_Products(models.Model):
+#     image = models.ImageField(upload_to='Special_Products',default='MenuSpecials.jpg')
+#     title = models.CharField(max_length=100)
+#     content = models.CharField(max_length=200)
+#     content2 = models.CharField(max_length=200)
+#     category = models.ManyToManyField(Category)
+#     status = models.BooleanField(default=False)
+#     created_date = models.DateTimeField(auto_now_add=True)
+#     class Meta:
+#         ordering = ['-created_date']
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
-class Pack_Products(models.Model):
-    image = models.ImageField(upload_to='Event',default='Event.jpg')
-    title = models.CharField(max_length=100)
-    content = models.CharField(max_length=200)
-    price = models.IntegerField(default=0)
-    status = models.BooleanField(default=False)
-    created_date = models.DateTimeField(auto_now_add=True)
-    class Meta:
-        ordering = ['-created_date']
-    def __str__(self):
-        return self.title
+# class Pack_Products(models.Model):
+#     image = models.ImageField(upload_to='Event',default='Event.jpg')
+#     title = models.CharField(max_length=100)
+#     content = models.CharField(max_length=200)
+#     price = models.IntegerField(default=0)
+#     status = models.BooleanField(default=False)
+#     created_date = models.DateTimeField(auto_now_add=True)
+#     class Meta:
+#         ordering = ['-created_date']
+#     def __str__(self):
+#         return self.title
 
 # class Order(models.Model):
 #     name = models.CharField(max_length=100)
@@ -91,7 +73,7 @@ class Comment(models.Model):
     message = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     status = models.BooleanField(default=False)
-
+    
     class Meta:
         ordering = ['-created_date']
 
