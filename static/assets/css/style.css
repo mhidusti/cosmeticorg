@@ -883,7 +883,7 @@ section {
 }
 .lol::before{
   content: "";
-  background: rgba(255, 187, 187, 0.603);
+  background: rgba(63, 53, 53, 0.658);
   position: absolute;
   bottom: 0;
   top: 0;
