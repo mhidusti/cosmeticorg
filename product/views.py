@@ -9,4 +9,11 @@ class ProductView(View):
 class ProductDetailView(View):
     def get(self, request, *args, **kwargs):
         return render(request,'product/detail.html')
+    
+
+class CartView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request,'product/cart.html')
+    
+
         
