@@ -1,112 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>سورس ریسپانسیو صفحه سبد خرید :: دریافت شده از وب روبیک</title>
+	<link type="text/css" href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <tr>
-        <!-- start item one -->
-        <td>
-            <div class="item">
-                <div class="item-front">
-                    <img src="pics/m.jpg" />
-                </div>
-                <div class="item-back">
-                    <img src="pics/mm.jpg" />
-                </div>
-            </div>
-            <p>سونی مدل a5<br /><span class="itemNum">A5 2017</span></p>
-            <p class="description">خلاصه توضیح در مورد محصول مورد نظر</p>
-        </td>
-        <td>1000000 تومان</td>
-        <td>
-            <input type="number" class="quantity" value="1" min="1" />
-            <a href="#" class="remove">حذف</a>
-        </td>
-        <td class="itemTotal">1000000 تومان</td>
-        <!-- end item one -->
-    </tr>
+	<div class="content">
+		<h1>سبد خرید</h1>
+		<p>تعداد محصولات را اضافه و کم کنید و سبد خود را آپدیت کنید.</p>
+		<!-- start undo button -->
+		<p class="removeAlert">
+			آیتم مورد نظر حذف شد. اشتباه کردید؟ <a href="#">برگرداندن آیتم</a>
+		</p>
+		<!-- end undo button -->
 
 
+		<table class="items">
+			<thead>
+			<!-- start table head -->
+			<tr>
+				<th>نام محصول</th>
+				<th>قیمت</th>
+				<th>تعداد</th>
+				<th>مجموع</th>
+			</tr>
+			<!-- end table head -->
+			</thead>
+			<tbody>
+			<!-- start table body -->
+			<tr>
+				<!-- start item one -->
+				<td>
+					<div class="item">
+						<div class="item-front">
+							<img src="pics/m.jpg" />
+						</div>
+						<div class="item-back">
+							<img src="pics/mm.jpg" />
+						</div>
+					</div>
+					<p>سونی مدل a5<br /><span class="itemNum">A5 2017</span></p>
+					<p class="description">خلاصه توضیح در مورد محصول مورد نظر</p>
+				</td>
+				<td>1000000 تومان</td>
+				<td>
+					<input type="number" class="quantity" value="1" min="1" />
+					<a href="#" class="remove">حذف</a>
+				</td>
+				<td class="itemTotal">1000000 تومان</td>
+				<!-- end item one -->
+			</tr>
+			<tr>
+				<!-- start item two -->
+				<td>
+					<div class="item">
+						<div class="item-front">
+							<img src="pics/m.jpg" />
+						</div>
+						<div class="item-back">
+							<img src="pics/mm.jpg" />
+						</div>
+					</div>
+					<p>سونی مدل a5<br /><span class="itemNum">A5 2017</span></p>
+					<p class="description">خلاصه توضیح در مورد محصول مورد نظر</p>
+				</td>
+				<td>1500000 تومان</td>
+				<td>
+					<input type="number" class="quantity" value="2" min="1" />
+					<a href="#" class="remove">حذف</a>
+				</td>
+				<td class="itemTotal">3000000 تومان</td>
+				<!-- end item two -->
+			</tr>
+			<tr>
+				<!-- start item three -->
+				<td>
+					<div class="item">
+						<div class="item-front">
+							<img src="pics/m.jpg" />
+						</div>
+						<div class="item-back">
+							<img src="pics/mm.jpg" />
+						</div>
+					</div>
+					<p>سونی مدل a5<br /><span class="itemNum">A5 2017</span></p>
+					<p class="description">خلاصه توضیح در مورد محصول مورد نظر</p>
+				</td>
+				<td>1000000 تومان</td>
+				<td>
+					<input type="number" class="quantity" value="2" min="1" />
+					<a href="#" class="remove">حذف</a>
+				</td>
+				<td class="itemTotal">2000000 تومان</td>
+				<!-- end item three -->
+			</tr>
+			<!-- end table body -->
+			</tbody>
+		</table>
+
+		<!-- start checkout list -->
+		<div class="cost">
+			<h2>پیش فاکتور</h2>
+
+			<table class="pricing">
+				<tbody>
+				<tr>
+					<td>قیمت کل</td>
+					<td class="subtotal"></td>
+				</tr>
+				<tr>
+					<td>مالیات</td>
+					<td class="tax"></td>
+				</tr>
+				<tr>
+					<td>هزینه ارسال</td>
+					<td class="shipping">10000 تومان</td>
+				</tr>
+				<tr>
+					<td><strong>مجموع:</strong></td>
+					<td class="orderTotal"></td>
+				</tr>
+				</tbody>
+			</table>
+			<a class="cta" href="#">خرید</a>
+		</div><!-- end checkout list -->
+	</div> <!-- End Content -->
 
 
-
-<style>
-
-    .cost {
-        padding-bottom: 10px;
-        border: 1px solid rgba(204, 204, 204, 0.5);
-        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5NmEwOTYiIHN0b3Atb3BhY2l0eT0iMC4xMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-        background-size: 100%;
-        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(150, 160, 150, 0.13)));
-        background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
-        background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
-      }
-      @media screen and (min-width: 45em) {
-        .cost {
-          width: 30%;
-          position: fixed;
-          left: 25px;
-          top: 257px;
-          border-width: 1px 0 1px 1px;
-        }
-      }
-      @media screen and (min-width: 55em) {
-        .cost {
-          width: 20%;
-        }
-      }
-      @media screen and (min-width: 61.5em) {
-        .cost {
-          top: 234px;
-        }
-      }
-      .cost h2 {
-        background: #016dc5;
-        color: #eee;
-        margin: 0;
-        padding: 10px 0;
-        width: 100%;
-        font-size: 1em;
-        text-align: center;
-        text-transform: uppercase;
-      }
-     
-</style>
-	<!-- start checkout list -->
-    <div class="cost">
-        <h2>پیش فاکتور</h2>
-
-        <table class="pricing">
-            <tbody>
-            <tr>
-                <td>قیمت کل</td>
-                <td class="subtotal"></td>
-            </tr>
-            <tr>
-                <td>مالیات</td>
-                <td class="tax"></td>
-            </tr>
-            <tr>
-                <td>هزینه ارسال</td>
-                <td class="shipping">10000 تومان</td>
-            </tr>
-            <tr>
-                <td><strong>مجموع:</strong></td>
-                <td class="orderTotal"></td>
-            </tr>
-            </tbody>
-        </table>
-        <a class="cta" href="#">خرید</a>
-    </div><!-- end checkout list -->
-</div> <!-- End Content -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script  src="js/scripts.js"></script>
 </body><!-- This template has been downloaded from Webrubik.com -->
 </html>
-
-
 
 
 
