@@ -1,8 +1,9 @@
 from django.shortcuts import render , redirect, get_object_or_404, redirect
 from django.views import View
 from .models import *
-# from django.contrib import messages
+from django.contrib import messages
 from django.views.generic import ListView,TemplateView,DetailView
+from .forms import ContactUsForm
 
 
 
@@ -38,12 +39,18 @@ def about (request):
 
 
 def contact(request):
-   return render(request,"root/contact.html")
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            form.save()  
+            messages.add_message(request,messages.SUCCESS,'we received your message and call with you as soon')
+            return redirect('root:contact')   
+        else :
+            messages.add_message(request,messages.ERROR,'Invalid data')
+            return redirect('root:contact')
 
+    return render(request,"root/contact.html")
 
-
-def social(request):
-    return redirect('root:social')
 
 
 
