@@ -32,14 +32,24 @@ def home(request):
     #         }
     return render(request,"root/index.html")
 
-def about (request):
-    return render(request,"root/about.html")
+# def about (request):
+#     return render(request,"root/about.html")
+
+
+class AboutListView(ListView):
+
+    template_name = 'root/about.html'
+    context_object_name = 'product'
+    queryset = Product_Feature.objects.filter(status = True)
 
 
 
 
-def contact(request):
-    if request.method == 'POST':
+class ContactListView(ListView):
+    model = ContactUs
+    template_name = 'root/contact.html'
+    
+    def post(self, request, *args, **kwargs):
         form = ContactUsForm(request.POST)
         if form.is_valid():
             form.save()  
@@ -48,8 +58,23 @@ def contact(request):
         else :
             messages.add_message(request,messages.ERROR,'Invalid data')
             return redirect('root:contact')
+        
 
-    return render(request,"root/contact.html")
+
+
+
+# def contact(request):
+#     if request.method == 'POST':
+#         form = ContactUsForm(request.POST)
+#         if form.is_valid():
+#             form.save()  
+#             messages.add_message(request,messages.SUCCESS,'we received your message and call with you as soon')
+#             return redirect('root:contact')   
+#         else :
+#             messages.add_message(request,messages.ERROR,'Invalid data')
+#             return redirect('root:contact')
+
+#     return render(request,"root/contact.html")
 
 
 

@@ -62,6 +62,11 @@
 
         <div class="col-lg-8 mt-5 mt-lg-0">
 
+          {% if messages %}
+          {% for message in messages %}
+            <p style='color:palevioletred'>{{ message}}</p>
+          {% endfor %}
+        {% endif %}
           <form  method="post" class="php-email-form">
             {% csrf_token %}
             <div class="row">
