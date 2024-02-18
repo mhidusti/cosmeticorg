@@ -17,31 +17,29 @@
               <div class="swiper-slide">
                 <div class="row event-item">
                   <div class="col-lg-6">
-                    <img src="{% static 'assets/img/lop.png' %}" class="img-fluid" alt="">
+                    <img src="{{product.image.url}}" class="img-fluid" alt="">
                   </div>
                   <div class="col-lg-6 pt-4 pt-lg-0 content">
-                    <h3>LIPSTICK</h3>
+                    <h3>{{product.title}}</h3>
                     <div class="price">
-                      <p><span>PRICE: $189</span></p>
+                      <p><span>PRICE: ${{product.price}}</span></p>
                     </div>
                     <p class="fst-italic">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                      magna aliqua.
+                      {{product.content}}
                     </p>
                     <ul>
-                      <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                      <li><i class="bi bi-check-circled"></i> {{product.attributes}}.</li>
                   
                     </ul>
                     <p>
-                      Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur
+                      
                     </p>
                   </div>
                 </div>
 
 
 
-  <style>
+<style>
     /* 8 */
 .btn-8 {
   background-color: #ffcaca;
@@ -124,9 +122,12 @@
   width: 100%;
 }
   
-  </style>
-                <button class="custom-btn btn-8" ><span>ADD \ DEL <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 15px;"></i></span></button>
-  
+</style>
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="pk" value="{{product.id}}"> 
+    <button type="submit" class="custom-btn btn-8" ><span>ADD \ DEL <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 15px;"></i></span></button>
+  </form>
             </div>
             <div class="swiper-pagination"></div>
           </div>

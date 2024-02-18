@@ -1,4 +1,5 @@
 {% load static %}
+{% load custom_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +79,10 @@
           <li class="dropdown"><a href="#"><span>cosmetics</span> <i class="bi bi-chevron-down"></i></a>
          
             <ul>
-              <li><a href="#">SKIN</a></li>
+              {% category as category%}
+              {% for cat in category %}
+              <li><a href="{% url 'product:product_cat' cat=cat.name %}">{{cat.name}}</a></li>
+              {% endfor %}
               <li class="dropdown"><a href="#"><span>COSMETIC</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">lips</a></li>
@@ -88,16 +92,14 @@
                   <li><a href="#">spray</a></li>
                 </ul>
               </li>
-              <li><a href="#">BABYPACK</a></li>
-              <li><a href="#">GIFT</a></li>
-              <li><a href="#">OFF</a></li>
+              
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="{% url 'root:contact' %}">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="{% url 'product:cart' %}" class="book-a-table-btn scrollto d-none d-lg-flex">shoping\cart <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 20px;"></i>&nbsp;<div style="background-color: rgb(190, 125, 147); border-radius: 50%;font-size: 15px;">{{ cart|length}}</div></a>
+      <a href="{% url 'product:cart' %}" class="book-a-table-btn scrollto d-none d-lg-flex">shoping\cart<i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 20px;"></i> <div style="font-size: 17px;">{{cart|length}}</div></a>
     </div>
   </header><!-- End Header -->
 
