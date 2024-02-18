@@ -254,17 +254,18 @@
       
        <div class="pagination p12">
         <ul>
-          <a href="#"><li>Previous</li></a>
-          <a href="#"><li>1</li></a>
-          <a href="#"><li>2</li></a>
-          <a href="#"><li>3</li></a>
-          <a href="#"><li>4</li></a>
-          <a href="#"><li>5</li></a>
-          <a class="is-active" href="#"><li>6</li></a>
-          <a href="#"><li>Next</li></a>
+          {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}"><li>Previous</li></a>
+          {% endif %}
+          
+          <a class="is-active" href="#"><li>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</li></a>
+          {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}"><li>Next</li></a>
+          {% endif %}
         </ul>
       </div> 
 </body>
 </html>
 
 {% endblock 'content' %}
+

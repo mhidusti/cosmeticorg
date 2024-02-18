@@ -11,7 +11,7 @@ class ProductView(ListView):
     
     template_name = 'product/product.html'
     context_object_name = 'product'
-    paginate_by = 2
+    paginate_by = 1
 
     def get_queryset(self):
         if self.kwargs.get('cat'):
