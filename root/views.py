@@ -4,34 +4,34 @@ from django.views import View
 from .models import *
 from django.contrib import messages
 from django.views.generic import ListView,TemplateView,DetailView
-from .forms import ContactUsForm
+from .forms import ContactUsForm,CommentForm
 
 
 
 
 
-def home(request):
-    # if request.method == 'GET':
-    #     category = Category.objects.all()
-    #     productFeature = Product_Feature.objects.filter(status = True)
-    #     bestproducts = Best_Products.objects.filter(status = True)
-    #     products = Products.objects.filter(status = True)
-    #     special = Special_Products.objects.filter(status = True)
-    #     pack = Pack_Products.objects.filter(status = True)
-    #     gallery = Gallery.objects.all()
-    #     social= Social.objects.filter(status = True)
-    #     context = {
-    #          'category': category,
-    #          'pf': productFeature,
-    #          'bp': bestproducts,
-    #          'products': products,
-    #          'special': special,
-    #          'pack': pack,
-    #          'gallery': gallery,
-    #          'social': social,
+# def home(request):
+#     # if request.method == 'GET':
+#     #     category = Category.objects.all()
+#     #     productFeature = Product_Feature.objects.filter(status = True)
+#     #     bestproducts = Best_Products.objects.filter(status = True)
+#     #     products = Products.objects.filter(status = True)
+#     #     special = Special_Products.objects.filter(status = True)
+#     #     pack = Pack_Products.objects.filter(status = True)
+#     #     gallery = Gallery.objects.all()
+#     #     social= Social.objects.filter(status = True)
+#     #     context = {
+#     #          'category': category,
+#     #          'pf': productFeature,
+#     #          'bp': bestproducts,
+#     #          'products': products,
+#     #          'special': special,
+#     #          'pack': pack,
+#     #          'gallery': gallery,
+#     #          'social': social,
             
-    #         }
-    return render(request,"root/index.html")
+#     #         }
+#     return render(request,"root/index.html")
 
 # def about (request):
 #     return render(request,"root/about.html")
@@ -50,15 +50,14 @@ class HomeListView(ListView):
         return context
     
     def post(self, request, *args, **kwargs):
-        form = Comment(request.POST)
+        form = CommentForm(request.POST)
         if form.is_valid():
             form.save()  
-            messages.add_message(request,messages.SUCCESS,'your email submited')
+            messages.add_message(request,messages.SUCCESS,'we received your comment')
             return redirect('root:home')   
         else :
-            messages.add_message(request,messages.ERROR,'Invalid email address')
+            messages.add_message(request,messages.ERROR,'Invalid data please try again')
             return redirect('root:home')
-
 
     # def get_context_data(self, **kwargs: Any): 
     #     context = super().get_context_data(**kwargs)
@@ -75,9 +74,8 @@ class HomeListView(ListView):
 
 
 class AboutListView(ListView):
-    
-    template_name = 'root/about.html'
-    context_object_name = 'product_feature'
+    template_name = "root/about.html"
+    context_object_name = 'productt'
     queryset = Product_Feature.objects.filter(status = True)
 
 
