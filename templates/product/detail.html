@@ -39,7 +39,7 @@
 
 
 
-  <style>
+<style>
     /* 8 */
 .btn-8 {
   background-color: #ffcaca;
@@ -122,9 +122,12 @@
   width: 100%;
 }
   
-  </style>
-                <button class="custom-btn btn-8" ><span>ADD \ DEL <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 15px;"></i></span></button>
-  
+</style>
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="pk" value="{{product.id}}"> 
+    <button type="submit" class="custom-btn btn-8" ><span>ADD \ DEL <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 15px;"></i></span></button>
+  </form>
             </div>
             <div class="swiper-pagination"></div>
           </div>

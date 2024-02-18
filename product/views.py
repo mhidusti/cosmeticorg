@@ -6,6 +6,7 @@ from .models import Products,Category
 
 
 
+
 class ProductView(ListView):
     
     template_name = 'product/product.html'
@@ -37,14 +38,13 @@ class ProductDetailView(DetailView):
         cart = Cart(request)
         
         if 'id' in request.POST :
-            product = get_object_or_404(Products, id=int(request.POST['id']))    
+            product = get_object_or_404(Products, id=request.POST['id'])    
             cart.delete_from_cart(product)
             
         else:
-            product = get_object_or_404(Products, id=int(request.POST['pk']))
-            quantity = int(request.POST['quantity'])
-            cart.add_to_cart_some_quantity(product, quantity)
-            
+            product = get_object_or_404(Products, id=request.POST['pk'])
+            cart.add_to_cart_one_quantity(product)
+
         return redirect(request.path_info)
        
 class CartView(TemplateView):
