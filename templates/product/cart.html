@@ -1,19 +1,392 @@
+{% block 'content' %}
+{% load static %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>سورس ریسپانسیو صفحه سبد خرید :: دریافت شده از وب روبیک</title>
-	<link type="text/css" href="css/style.css" rel="stylesheet" />
+	<title>  CART & PAY</title>
+	
 </head>
 <body>
+
+
+	<style>
+		/* CSS Document */
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../fonts/Vazir.eot');
+  src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype'), url('../fonts/Vazir.svg') format('svg');
+}
+
+body {
+  font-family: "Vazir";
+  direction: rtl;
+  background-color: #bbbbbbb7;
+}
+
+@media screen and (min-width: 30em) {
+  body {
+    padding: 20px;
+  }
+}
+
+.content {
+  padding: 5px;
+  background: #8d8d8d;
+  background: rgba(197, 197, 197, 0.329);
+  border: 5px solid #ffb6b6;
+  border: 5px solid #ffc3c3;
+  zoom: 1;
+}
+.content:before, .content:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.content:after {
+  clear: both;
+}
+@media screen and (min-width: 30em) {
+  .content {
+    padding: 20px;
+  }
+}
+
+h1 {
+  direction: ltr;
+  color: #ffa1a1;
+  margin-bottom: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: #ffb9b9;
+  text-decoration: none;
+
+  border-bottom: 1px solid transparent;
+  -moz-transition: color 0.25s ease-in, border 0.25s ease-in, background-color 0.25s ease-in;
+  -o-transition: color 0.25s ease-in, border 0.25s ease-in, background-color 0.25s ease-in;
+  -webkit-transition: color 0.25s ease-in, border 0.25s ease-in, background-color 0.25s ease-in;
+  transition: color 0.25s ease-in, border 0.25s ease-in, background-color 0.25s ease-in;
+}
+a:hover {
+  color: #ee95a8;
+  border-bottom-color: #ff9a9a;
+}
+a.cta {
+  margin: 25px auto;
+  width: 90%;
+  position: relative;
+  outline: 0;
+  padding: 8px 0;
+  display: block;
+  cursor: pointer;
+  color: #eee;
+  background-color: #ffacac;
+  border: 0;
+  font-size: 0.875em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a.cta:hover {
+  background-color: #b4b4b4;
+  color: #fff;
+}
+a.cta:active {
+  top: 2px;
+  background-color: #a8a8a8;
+}
+
+.removeAlert {
+  width: 100%;
+  display: none;
+  padding: 7px 5px;
+  color: #eee;
+  background: #ffc2c2;
+  background: rgba(199, 199, 199, 0.7);
+}
+
+table {
+  width: 100%;
+  color: #131313;
+}
+table.items {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+@media screen and (min-width: 45em) {
+  table.items {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 55em) {
+  table.items {
+    width: 70%;
+  }
+}
+table.items tbody tr {
+  margin-bottom: 10px;
+  background-color: rgba(150, 160, 150, 0.39);
+}
+table.items tbody td {
+  border-top: 1px solid rgba(204, 204, 204, 0.5);
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+table.items tbody td:first-child {
+  border-right: 1px solid rgba(204, 204, 204, 0.5);
+}
+table.items tbody td:last-child {
+  border-left: 1px solid rgba(204, 204, 204, 0.5);
+}
+table.pricing {
+  width: 100%;
+}
+table.pricing tr {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+table.pricing tr:last-child {
+  border-bottom: 0;
+  color: #ff9797;
+}
+table.pricing td:nth-child(2) {
+  display: table-cell;
+}
+
+th {
+  text-transform: uppercase;
+  background: #ffafaf;
+  color: #eee;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.875em;
+}
+th:nth-child(2) {
+  display: none;
+}
+@media screen and (min-width: 24em) {
+  th:nth-child(2) {
+    display: table-cell;
+  }
+}
+
+td {
+  padding: 10px;
+}
+td:first-child {
+  width: 50%;
+}
+td:nth-child(2) {
+  display: none;
+}
+@media screen and (min-width: 24em) {
+  td:nth-child(2) {
+    display: table-cell;
+  }
+}
+td:nth-child(n+2):nth-child(-n+4) {
+  text-align: center;
+}
+td:last-child {
+  font-weight: bold;
+}
+td a.remove {
+  font-size: 0.75em;
+  display: block;
+  width: 50px;
+  margin: 5px auto 0;
+  color: #ff978e;
+}
+td a.remove:hover {
+  color: #ff9589;
+  border-bottom-color: #252525;
+}
+td p {
+  float: right;
+  width: 90%;
+  margin-top: 0;
+}
+@media screen and (min-width: 40em) {
+  td p {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 68em) {
+  td p {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 80em) {
+  td p {
+    width: 55%;
+  }
+}
+td p.description {
+  display: none;
+}
+@media screen and (min-width: 57em) {
+  td p.description {
+    font-size: 0.8em;
+    display: inline;
+  }
+}
+td .itemNum {
+  font-size: 0.75em;
+  font-style: italic;
+}
+td input.quantity {
+  width: 50px;
+  margin-top: 22px;
+  padding: 4px;
+  font-size: 0.825em;
+  border: 1px solid #aaa;
+}
+
+.item {
+  display: none;
+  position: relative;
+  z-index: 1000;
+  width: 75px;
+  height: 100px;
+  margin-left: 25px;
+  float: right;  
+}
+.item img {
+  width: 100%;
+  height: 100%;
+}
+.item .item-back {
+  display: none;
+}
+@media screen and (min-width: 57em) {
+  .item {
+    display: block;
+  }
+  .item .item-front,
+  .item .item-back {
+    width: 75px;
+    height: 100px;
+    border: 1px solid #ff9d9d;
+    border: 1px solid rgba(255, 168, 168, 0.75);
+  }
+}
+@media screen and (min-width: 62em) {
+  .item {
+    width: 100px;
+    height: 150px;
+  }
+  .item .item-front,
+  .item .item-back {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 250ms;
+    -o-transition: -o-transform 250ms;
+    -webkit-transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    border: 2px solid #ffa3b2;
+    border: 2px solid rgba(255, 173, 173, 0.75);
+    -moz-box-shadow: 0 0 5px rgba(187, 187, 187, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(187, 187, 187, 0.5);
+    box-shadow: 0 0 5px rgba(187, 187, 187, 0.5);
+  }
+  .item .item-front {
+    -moz-transform: perspective(300) rotateX(0);
+    -webkit-transform: perspective(300) rotateX(0);
+    transform: perspective(300) rotateX(0);
+    z-index: 900;
+    background: #fff;
+  }
+  .item .item-back {
+    -moz-transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    z-index: 800;
+    background: #ffb0b0;
+  }
+  .item:hover .item-front {
+    -moz-transform: perspective(300) rotateX(180deg);
+    -webkit-transform: perspective(300) rotateX(180deg);
+    transform: perspective(300) rotateX(180deg);
+  }
+  .item:hover .item-back {
+    -moz-transform: perspective(300) rotateX(0deg);
+    -webkit-transform: perspective(300) rotateX(0deg);
+    transform: perspective(300) rotateX(0deg);
+  }
+}
+@media screen and (min-width: 68em) {
+  .item {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.cost {
+  margin-left: 130px;
+  padding-bottom: 10px;
+  border: 1px solid rgba(131, 131, 131, 0.5);
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5NmEwOTYiIHN0b3Atb3BhY2l0eT0iMC4xMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(150, 160, 150, 0.13)));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
+
+}
+@media screen and (min-width: 45em) {
+  .cost {
+    width: 30%;
+    position: fixed;
+    left: 25px;
+    top: 257px;
+    border-width: 1px 0 1px 1px;
+  }
+}
+@media screen and (min-width: 55em) {
+  .cost {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 61.5em) {
+  .cost {
+    top: 234px;
+  }
+}
+.cost h2 {
+  background: #ffb6b6;
+  color: #eee;
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+	</style>
 	<div class="content">
-		<h1>سبد خرید</h1>
-		<p>تعداد محصولات را اضافه و کم کنید و سبد خود را آپدیت کنید.</p>
+		<h1>CART</h1>
+		<p>UPDATE YOUR PRODUCT NUMBER</p>
 		<!-- start undo button -->
 		<p class="removeAlert">
-			آیتم مورد نظر حذف شد. اشتباه کردید؟ <a href="#">برگرداندن آیتم</a>
+			ITEM deleted , Are you sure?<a href="#"> undo</a>
 		</p>
 		<!-- end undo button -->
 
@@ -22,15 +395,38 @@
 			<thead>
 			<!-- start table head -->
 			<tr>
-				<th>نام محصول</th>
-				<th>قیمت</th>
-				<th>تعداد</th>
-				<th>مجموع</th>
+				<th>product name </th>
+				<th>price</th>
+				<th>numbs</th>
+				<th>total</th>
 			</tr>
 			<!-- end table head -->
 			</thead>
 			<tbody>
 			<!-- start table body -->
+			<tr>
+				<!-- start item one -->
+				<td>
+					<div class="item">
+						<div class="item-front">
+							<img src="{% static 'assets/img/lop.png' %}" />
+						</div>
+						<div class="item-back">
+							<img src="{% static 'assets/img/medd.png' %}" />
+						</div>
+					</div>
+					<p>lipstick<br /><span class="itemNum">best material for pro</span></p>
+					<p class="description"> Lorem ipsum dolor sit amet consectetu</p>
+				</td>
+				<td>1000000 $</td>
+				<td>
+					<input type="number" class="quantity" value="1" min="1" />
+					<a href="#" class="remove">delete</a>
+				</td>
+				<td class="itemTotal">1000000 $</td>
+				<!-- end item one -->
+			</tr>
+			
 			<tr>
 				<!-- start item one -->
 				<td>
@@ -42,100 +438,53 @@
 							<img src="pics/mm.jpg" />
 						</div>
 					</div>
-					<p>سونی مدل a5<br /><span class="itemNum">A5 2017</span></p>
-					<p class="description">خلاصه توضیح در مورد محصول مورد نظر</p>
+					<p>lipstick<br /><span class="itemNum">best material for pro</span></p>
+					<p class="description"> Lorem ipsum dolor sit amet consectetu</p>
 				</td>
-				<td>1000000 تومان</td>
+				<td>1000000 $</td>
 				<td>
 					<input type="number" class="quantity" value="1" min="1" />
-					<a href="#" class="remove">حذف</a>
+					<a href="#" class="remove">delete</a>
 				</td>
-				<td class="itemTotal">1000000 تومان</td>
+				<td class="itemTotal">1000000 $</td>
 				<!-- end item one -->
 			</tr>
-			<tr>
-				<!-- start item two -->
-				<td>
-					<div class="item">
-						<div class="item-front">
-							<img src="pics/m.jpg" />
-						</div>
-						<div class="item-back">
-							<img src="pics/mm.jpg" />
-						</div>
-					</div>
-					<p>سونی مدل a5<br /><span class="itemNum">A5 2017</span></p>
-					<p class="description">خلاصه توضیح در مورد محصول مورد نظر</p>
-				</td>
-				<td>1500000 تومان</td>
-				<td>
-					<input type="number" class="quantity" value="2" min="1" />
-					<a href="#" class="remove">حذف</a>
-				</td>
-				<td class="itemTotal">3000000 تومان</td>
-				<!-- end item two -->
-			</tr>
-			<tr>
-				<!-- start item three -->
-				<td>
-					<div class="item">
-						<div class="item-front">
-							<img src="pics/m.jpg" />
-						</div>
-						<div class="item-back">
-							<img src="pics/mm.jpg" />
-						</div>
-					</div>
-					<p>سونی مدل a5<br /><span class="itemNum">A5 2017</span></p>
-					<p class="description">خلاصه توضیح در مورد محصول مورد نظر</p>
-				</td>
-				<td>1000000 تومان</td>
-				<td>
-					<input type="number" class="quantity" value="2" min="1" />
-					<a href="#" class="remove">حذف</a>
-				</td>
-				<td class="itemTotal">2000000 تومان</td>
-				<!-- end item three -->
-			</tr>
-			<!-- end table body -->
+			
 			</tbody>
 		</table>
 
 		<!-- start checkout list -->
 		<div class="cost">
-			<h2>پیش فاکتور</h2>
+			<h2>Factor</h2>
 
 			<table class="pricing">
 				<tbody>
 				<tr>
-					<td>قیمت کل</td>
+					<td> total price</td>
 					<td class="subtotal"></td>
 				</tr>
 				<tr>
-					<td>مالیات</td>
+					<td>tax</td>
 					<td class="tax"></td>
 				</tr>
 				<tr>
-
+					<td>shipping cost </td>
+					<td class="shipping">10000 $</td>
 				</tr>
 				<tr>
-					<td><strong>مجموع:</strong></td>
+					<td><strong>totality:</strong></td>
 					<td class="orderTotal"></td>
 				</tr>
 				</tbody>
 			</table>
-			<a class="cta" href="#">خرید</a>
+			<a class="cta" href="#">BUYING</a>
 		</div><!-- end checkout list -->
 	</div> <!-- End Content -->
 
 
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script  src="js/scripts.js"></script>
+	<script src="{% static 'assets/js/jquery-3.1.1.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+	<script  src="{% static 'assets/js/scripts.js' %}"></script>
 </body><!-- This template has been downloaded from Webrubik.com -->
 </html>
-
-
-
-
-
+{% endblock 'content' %}

@@ -36,7 +36,7 @@ $(function(){
             // calculate the new total
             total = parseFloat(val * pricePer).toFixed(0);
             // set the total cell to the new price
-            $(this).parents("td").siblings(".itemTotal").text(total + " تومان ");
+            $(this).parents("td").siblings(".itemTotal").text(total + " $ ");
 
             // recalculate prices for all items
             calculatePrices();
@@ -81,13 +81,13 @@ function updateSubTotal(){
         value = formatNum(value);
 
         sum += parseFloat(value);
-        $("table.pricing td.subtotal").text(sum.toFixed(0) + " تومان ");
+        $("table.pricing td.subtotal").text(sum.toFixed(0) + " $ ");
     });
 }
 
 function addTax() {
     var tax = parseFloat(sum * 0).toFixed(0);
-    $("table.pricing td.tax").text(tax + " تومان ");
+    $("table.pricing td.tax").text(tax + " $ ");
 }
 
 function calculateTotal() {
@@ -102,7 +102,7 @@ function calculateTotal() {
 
     total = (subtotal + tax + shipping).toFixed(0);
 
-    $("table.pricing td.orderTotal").text(total + " تومان ");
+    $("table.pricing td.orderTotal").text(total + "$ ");
 }
 
 function calculatePrices() {
