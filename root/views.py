@@ -1,3 +1,4 @@
+from typing import Any
 from django.shortcuts import render , redirect, get_object_or_404, redirect
 from django.views import View
 from .models import *
@@ -36,10 +37,47 @@ def home(request):
 #     return render(request,"root/about.html")
 
 
-class AboutListView(ListView):
+class HomeListView(ListView):
+    template_name = "root/index.html"
+    context_object_name = 'product_feature'
+    queryset = Product_Feature.objects.filter(status = True)
 
+    def get_context_data(self, **kwargs: Any):
+        context = super().get_context_data(**kwargs)
+        context['best_product'] = Best_Products.objects.filter(status = True)
+        context['gallery'] = Gallery.objects.filter(status = True)
+        context['social'] = Social.objects.filter(status = True)
+        return context
+    
+    def post(self, request, *args, **kwargs):
+        form = Comment(request.POST)
+        if form.is_valid():
+            form.save()  
+            messages.add_message(request,messages.SUCCESS,'your email submited')
+            return redirect('root:home')   
+        else :
+            messages.add_message(request,messages.ERROR,'Invalid email address')
+            return redirect('root:home')
+
+
+    # def get_context_data(self, **kwargs: Any): 
+    #     context = super().get_context_data(**kwargs)
+    #     context['gallery'] = Gallery.objects.filter(status = True)
+    #     return context
+    
+    # def get_context_data(self, **kwargs: Any): 
+    #     context = super().get_context_data(**kwargs)
+    #     context['social'] = Social.objects.filter(status = True)
+    #     return context
+
+
+
+
+
+class AboutListView(ListView):
+    
     template_name = 'root/about.html'
-    context_object_name = 'product'
+    context_object_name = 'product_feature'
     queryset = Product_Feature.objects.filter(status = True)
 
 
