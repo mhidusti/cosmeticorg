@@ -88,10 +88,10 @@
           <h2>best offers and fe</h2>
           <p>pack cosmetic for you</p>
         </div>
-
+      {% for best_prd in best_product %}
         <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
-            {% for best_prd in best_product %}
+            
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
@@ -118,14 +118,14 @@
               </div>
              
             </div><!-- End testimonial item -->
-            {% endfor %}
+            
 
 
 
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
+        {% endfor %}
       </div>
     </section><!-- End Events Section -->
 
@@ -363,4 +363,4 @@
 
   </main><!-- End #main -->
   {% endblock 'content' %}
- 
+
