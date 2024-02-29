@@ -17,7 +17,8 @@ class HomeListView(ListView):
 
     def get_context_data(self, **kwargs: Any):
         context = super().get_context_data(**kwargs)
-        context['best_product'] = Best_Products.objects.filter(status = True)
+        context['special_products'] = Special_Products.objects.filter(status = True)
+        context['pack_products'] = Pack_Products.objects.filter(status = True)
         context['gallery'] = Gallery.objects.filter(status = True)
         context['social'] = Social.objects.filter(status = True)
         return context

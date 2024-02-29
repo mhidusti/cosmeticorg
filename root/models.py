@@ -9,10 +9,26 @@ class Product_Feature(models.Model):
     image = models.ImageField(upload_to='Product_Feature')
     status = models.BooleanField(default=False)
   
-class Best_Products(models.Model):
+
+
+class Special_Products(models.Model):
+    image = models.ImageField(upload_to='Special_Products',default='MenuSpecials.jpg')
     title = models.CharField(max_length=100)
-    content =models.CharField(max_length=200)
-    image = models.ImageField(upload_to='Product_Feature')
+    content = models.CharField(max_length=200)
+    content2 = models.CharField(max_length=200)
+    status = models.BooleanField(default=False)
+    created_date = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ['-created_date']
+
+    def __str__(self):
+        return self.title
+
+class Pack_Products(models.Model):
+    image = models.ImageField(upload_to='Event',default='Event.jpg')
+    title = models.CharField(max_length=100)
+    content = models.CharField(max_length=200)
+    price = models.IntegerField(default=0)
     status = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
     class Meta:
@@ -20,44 +36,6 @@ class Best_Products(models.Model):
     def __str__(self):
         return self.title
 
-
-# class Special_Products(models.Model):
-#     image = models.ImageField(upload_to='Special_Products',default='MenuSpecials.jpg')
-#     title = models.CharField(max_length=100)
-#     content = models.CharField(max_length=200)
-#     content2 = models.CharField(max_length=200)
-#     category = models.ManyToManyField(Category)
-#     status = models.BooleanField(default=False)
-#     created_date = models.DateTimeField(auto_now_add=True)
-#     class Meta:
-#         ordering = ['-created_date']
-
-#     def __str__(self):
-#         return self.title
-
-# class Pack_Products(models.Model):
-#     image = models.ImageField(upload_to='Event',default='Event.jpg')
-#     title = models.CharField(max_length=100)
-#     content = models.CharField(max_length=200)
-#     price = models.IntegerField(default=0)
-#     status = models.BooleanField(default=False)
-#     created_date = models.DateTimeField(auto_now_add=True)
-#     class Meta:
-#         ordering = ['-created_date']
-#     def __str__(self):
-#         return self.title
-
-# class Order(models.Model):
-#     name = models.CharField(max_length=100)
-#     email = models.EmailField()
-#     phone = models.CharField(max_length=15)
-#     number= models.IntegerField()
-#     message = models.TextField()
-#     date = models.DateTimeField()
-#     time= models.DateTimeField()
-
-#     def __str__(self):
-#         return self.email
     
 class Gallery(models.Model):
     image = models.ImageField(upload_to='Gallery')

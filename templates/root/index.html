@@ -58,7 +58,7 @@
               </li>
             </ul>
           </div>
-          {% for prd in product_feature %}
+          {% for prd in special_products %}
           <div class="col-lg-9 mt-4 mt-lg-0">
             <div class="tab-content">
               <div class="tab-pane active show" id="tab-1">
@@ -88,31 +88,22 @@
           <h2>best offers and fe</h2>
           <p>pack cosmetic for you</p>
         </div>
-      {% for best_prd in best_product %}
+      {% for pack in pack_products %}
         <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
             
             <div class="swiper-slide">
               <div class="row event-item">
                 <div class="col-lg-6">
-                  <img src="{{best_prd.image.url}}" class="img-fluid" alt="">
+                  <img src="{{pack.image.url}}" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
-                  <h3>{{best_prd.title}}</h3>
+                  <h3>{{pack.title}}</h3>
                   <div class="price">
-                    <p><span>$189</span></p>
+                    <p><span>${{pack.price}}</span></p>
                   </div>
-                  <p class="fst-italic">
-                    {{best_prd.content}}
-                  </p>
-                  <ul>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  </ul>
                   <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur
+                    {{pack.content}}
                   </p>
                 </div>
               </div>
