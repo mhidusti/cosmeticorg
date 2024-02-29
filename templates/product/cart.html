@@ -404,51 +404,31 @@ td input.quantity {
 			</thead>
 			<tbody>
 			<!-- start table body -->
+      {% for  product in cart %}
 			<tr>
 				<!-- start item one -->
 				<td>
 					<div class="item">
 						<div class="item-front">
-							<img src="{% static 'assets/img/lop.png' %}" />
+							<img src="{{ product.product_object.image.url }}" />
 						</div>
 						<div class="item-back">
 							<img src="{% static 'assets/img/medd.png' %}" />
 						</div>
 					</div>
-					<p>lipstick<br /><span class="itemNum">best material for pro</span></p>
+					<p>{{product.product_object.title}}<br /><span class="itemNum">best material for pro</span></p>
 					<p class="description"> Lorem ipsum dolor sit amet consectetu</p>
 				</td>
-				<td>1000000 $</td>
+				<td>{{ product.product_object.price }} $</td>
 				<td>
 					<input type="number" class="quantity" value="1" min="1" />
-					<a href="#" class="remove">delete</a>
+					<a href="{{product.quantity}}" class="remove">delete</a>
 				</td>
-				<td class="itemTotal">1000000 $</td>
+				<td class="itemTotal">{{ product.product_object.price }} $</td>
 				<!-- end item one -->
 			</tr>
+      {% endfor %}
 			
-			<tr>
-				<!-- start item one -->
-				<td>
-					<div class="item">
-						<div class="item-front">
-							<img src="pics/m.jpg" />
-						</div>
-						<div class="item-back">
-							<img src="pics/mm.jpg" />
-						</div>
-					</div>
-					<p>lipstick<br /><span class="itemNum">best material for pro</span></p>
-					<p class="description"> Lorem ipsum dolor sit amet consectetu</p>
-				</td>
-				<td>1000000 $</td>
-				<td>
-					<input type="number" class="quantity" value="1" min="1" />
-					<a href="#" class="remove">delete</a>
-				</td>
-				<td class="itemTotal">1000000 $</td>
-				<!-- end item one -->
-			</tr>
 			
 			</tbody>
 		</table>
@@ -468,13 +448,8 @@ td input.quantity {
 					<td class="tax"></td>
 				</tr>
 				<tr>
-<<<<<<< HEAD
 					<td>shipping cost </td>
 					<td class="shipping">10000 $</td>
-=======
-					<td>هزینه ارسال</td>
-					<td class="shipping">10000 تومان</td>
->>>>>>> 0a06b12 (.)
 				</tr>
 				<tr>
 					<td><strong>totality:</strong></td>
@@ -492,9 +467,4 @@ td input.quantity {
 	<script  src="{% static 'assets/js/scripts.js' %}"></script>
 </body><!-- This template has been downloaded from Webrubik.com -->
 </html>
-<<<<<<< HEAD
 {% endblock 'content' %}
-=======
-
-
->>>>>>> 0a06b12 (.)

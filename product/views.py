@@ -43,7 +43,7 @@ class ProductDetailView(DetailView):
             
         else:
             product = get_object_or_404(Products, id=request.POST['pk'])
-            cart.add_to_cart_one_quantity(product)
+            cart.add_to_cart_some_quantity(product)
 
         return redirect(request.path_info)
        
