@@ -441,20 +441,12 @@ td input.quantity {
 				<tbody>
 				<tr>
 					<td> total price</td>
-					<td class="subtotal"></td>
+
+					<td class="subtotal">{{ cart.get_total_price_some_quantity }}</td>
 				</tr>
-				<tr>
-					<td>tax</td>
-					<td class="tax"></td>
-				</tr>
-				<tr>
-					<td>shipping cost </td>
-					<td class="shipping">10000 $</td>
-				</tr>
-				<tr>
-					<td><strong>totality:</strong></td>
-					<td class="orderTotal"></td>
-				</tr>
+			
+				
+			
 				</tbody>
 			</table>
 			<a class="cta" href="#">BUYING</a>
