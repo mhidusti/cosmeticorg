@@ -452,6 +452,7 @@ td input.quantity {
         {% csrf_token %}
         <button type="submit">Clear Cart</button>
     </form>
+    <a href="{% url "order:order" %}" class="btn btn-primary">Submit payment</a>
 		</div><!-- end checkout list -->
 	</div> <!-- End Content -->
 
