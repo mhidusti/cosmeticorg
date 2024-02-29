@@ -445,11 +445,13 @@ td input.quantity {
 					<td class="subtotal">{{ cart.get_total_price_some_quantity }}</td>
 				</tr>
 			
-				
-			
 				</tbody>
 			</table>
 			<a class="cta" href="#">BUYING</a>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit">Clear Cart</button>
+    </form>
 		</div><!-- end checkout list -->
 	</div> <!-- End Content -->
 
