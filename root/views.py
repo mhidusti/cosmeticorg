@@ -21,6 +21,7 @@ class HomeListView(ListView):
         context['pack_products'] = Pack_Products.objects.filter(status = True)
         context['gallery'] = Gallery.objects.filter(status = True)
         context['social'] = Social.objects.filter(status = True)
+        context['comment'] = Comment.objects.filter(status = True)
         return context
     
     def post(self, request, *args, **kwargs):
