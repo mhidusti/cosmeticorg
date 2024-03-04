@@ -41,8 +41,8 @@ body {
   padding: 5px;
   background: #8d8d8d;
   background: rgba(197, 197, 197, 0.329);
-  border: 5px solid #ffb6b6;
-  border: 5px solid #ffc3c3;
+  border: 5px solid #636363;
+  border: 5px solid #6b6b6b;
   zoom: 1;
 }
 .content:before, .content:after {
@@ -71,7 +71,7 @@ p {
 }
 
 a {
-  color: #ffb9b9;
+  color: #ffabab;
   text-decoration: none;
 
   border-bottom: 1px solid transparent;
@@ -81,7 +81,7 @@ a {
   transition: color 0.25s ease-in, border 0.25s ease-in, background-color 0.25s ease-in;
 }
 a:hover {
-  color: #ee95a8;
+  color: #ff8d8d;
   border-bottom-color: #ff9a9a;
 }
 a.cta {
@@ -92,8 +92,8 @@ a.cta {
   padding: 8px 0;
   display: block;
   cursor: pointer;
-  color: #eee;
-  background-color: #ffacac;
+  color: #ffffff;
+  background-color: #ff9f9fde;
   border: 0;
   font-size: 0.875em;
   font-weight: bold;
@@ -102,12 +102,12 @@ a.cta {
   text-transform: uppercase;
 }
 a.cta:hover {
-  background-color: #b4b4b4;
+  background-color: #b1b1b1a4;
   color: #fff;
 }
 a.cta:active {
   top: 2px;
-  background-color: #a8a8a8;
+  background-color: #7c7c7c;
 }
 
 .removeAlert {
@@ -115,8 +115,8 @@ a.cta:active {
   display: none;
   padding: 7px 5px;
   color: #eee;
-  background: #ffc2c2;
-  background: rgba(199, 199, 199, 0.7);
+  background: #ffb2b2;
+  background: rgba(61, 61, 61, 0.7);
 }
 
 table {
@@ -142,11 +142,11 @@ table.items tbody tr {
   background-color: rgba(150, 160, 150, 0.39);
 }
 table.items tbody td {
-  border-top: 1px solid rgba(204, 204, 204, 0.5);
+  border-top: 1px solid rgba(138, 138, 138, 0.5);
   border-bottom: 1px solid rgba(204, 204, 204, 0.5);
 }
 table.items tbody td:first-child {
-  border-right: 1px solid rgba(204, 204, 204, 0.5);
+  border-right: 1px solid rgba(116, 116, 116, 0.5);
 }
 table.items tbody td:last-child {
   border-left: 1px solid rgba(204, 204, 204, 0.5);
@@ -155,11 +155,11 @@ table.pricing {
   width: 100%;
 }
 table.pricing tr {
-  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+  border-bottom: 1px solid rgba(56, 56, 56, 0.623);
 }
 table.pricing tr:last-child {
   border-bottom: 0;
-  color: #ff9797;
+  color: #727272;
 }
 table.pricing td:nth-child(2) {
   display: table-cell;
@@ -167,7 +167,7 @@ table.pricing td:nth-child(2) {
 
 th {
   text-transform: uppercase;
-  background: #ffafaf;
+  background: #ff9696;
   color: #eee;
   padding: 10px 0;
   text-align: center;
@@ -251,7 +251,7 @@ td input.quantity {
   margin-top: 22px;
   padding: 4px;
   font-size: 0.825em;
-  border: 1px solid #aaa;
+  border: 1px solid #3a3a3a;
 }
 
 .item {
@@ -278,7 +278,7 @@ td input.quantity {
   .item .item-back {
     width: 75px;
     height: 100px;
-    border: 1px solid #ff9d9d;
+    border: 1px solid #000000;
     border: 1px solid rgba(255, 168, 168, 0.75);
   }
 }
@@ -300,11 +300,11 @@ td input.quantity {
     -o-transition: -o-transform 250ms;
     -webkit-transition: -webkit-transform 250ms;
     transition: transform 250ms;
-    border: 2px solid #ffa3b2;
-    border: 2px solid rgba(255, 173, 173, 0.75);
+    border: 2px solid #353535;
+    border: 2px solid rgba(109, 109, 109, 0.75);
     -moz-box-shadow: 0 0 5px rgba(187, 187, 187, 0.5);
     -webkit-box-shadow: 0 0 5px rgba(187, 187, 187, 0.5);
-    box-shadow: 0 0 5px rgba(187, 187, 187, 0.5);
+    box-shadow: 0 0 5px rgba(255, 79, 79, 0.5);
   }
   .item .item-front {
     -moz-transform: perspective(300) rotateX(0);
@@ -340,14 +340,16 @@ td input.quantity {
 
 .cost {
   margin-left: 130px;
-  padding-bottom: 10px;
+  margin-top: 130px;
+  padding-bottom: 80px;
   border: 1px solid rgba(131, 131, 131, 0.5);
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5NmEwOTYiIHN0b3Atb3BhY2l0eT0iMC4xMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(150, 160, 150, 0.13)));
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
+  background-image: -moz-linear-gradient(top, rgba(68, 68, 68, 0.87) 0%, rgba(150, 160, 150, 0.13) 100%);
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(150, 160, 150, 0.13) 100%);
+
 
 }
 @media screen and (min-width: 45em) {
@@ -370,8 +372,8 @@ td input.quantity {
   }
 }
 .cost h2 {
-  background: #ffb6b6;
-  color: #eee;
+  background: #ffadad;
+  color: #000000;
   margin: 0;
   padding: 10px 0;
   width: 100%;
@@ -448,11 +450,12 @@ td input.quantity {
 				</tbody>
 			</table>
 			<a class="cta" href="#">BUYING</a>
+			<a class="cta" href="#">clearcart</a>
       <form method="post">
         {% csrf_token %}
-        <button type="submit">Clear Cart</button>
+        
     </form>
-    <a href="{% url "order:order" %}" class="btn btn-primary">Submit payment</a>
+    <a href="{% url "order:order" %}" class="cta">Submit payment</a>
 		</div><!-- end checkout list -->
 	</div> <!-- End Content -->
 
