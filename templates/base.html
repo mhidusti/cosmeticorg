@@ -93,7 +93,8 @@
           </li>
           {% if request.user.is_authenticated %}
           <li style="color: #e7a1a1;">loged as {{request.user.username}}</li>
-          <li><img src={{request.user.image.url}}></li>
+          <li><img src={{request.user.image.url}} style="border-radius: 50%;width:500%; height: 500%;"></li>&nbsp;
+          
           <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
           <li><a href="{% url 'password_change' %}">change password</a></li>
           {% else %}

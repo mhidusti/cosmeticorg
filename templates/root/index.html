@@ -140,7 +140,7 @@
               {{comment.message}}
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+            <img src="{{request.user.image.url}}" class="testimonial-img" alt="">
             <h3>{{comment.name}}</h3>
             <h4>{{comment.email}}</h4>
           </div>
