@@ -49,6 +49,7 @@ p {
 input {
   border: 1px solid #b3b2b26b;
   font-size: 12px;
+  margin-top:20px ;
   background-color: #9e9e9e52;
   height: 30px;
   padding: 4px 8px;
@@ -59,6 +60,7 @@ input {
           
   &:focus {
     outline: none;
+    background-color: #cecece;
   }
 }
 button {
@@ -76,8 +78,9 @@ button {
     padding: 4px;
     position: absolute;
     width: 30px;
+    margin-top: 20px;
     position: absolute;
-    left: 710px;
+    left: 800px;
    
           
   }
@@ -106,7 +109,7 @@ button {
             background: rgb(255, 186, 186);
             color: #a8a8a8;
             position: absolute;
-            left: 900px;
+            left: 700px;
           
           }
           &.btn-reset {
@@ -153,9 +156,9 @@ button {
       border-right: none;
       transition: all .3s ease-in;
     
-      width: 120px;
+      width: 220px;
       &:focus {
-        width: 220px;
+        width: 300px;
         
         ~ button {
           &.btn-search {
@@ -164,7 +167,7 @@ button {
             color: #cecece;
             left: 220px;
             position: absolute;
-            left: 800px;
+            left: 900px;
           
           }
           &.btn-reset {
@@ -175,7 +178,7 @@ button {
             color: #9c9c9c;
             left: 254px;
             position: absolute;
-            left: 850px;
+            left: 935px;
           
          
         }
@@ -389,7 +392,7 @@ button {
                     {% for cat in product.category.all  %}
                    <p>{{cat.name}}</p>
                   {% endfor %}
-                    <button class="bubbly-button">ADD<i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 17px;"></i>&nbsp;<div style="background-color: rgb(241, 158, 186); border-radius: 50%;font-size: 15px;"></div></button>
+                    <a href="{%url 'product:cart' %}" class="bubbly-button">ADD<i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 17px;"></i>&nbsp;<div style="background-color: rgb(241, 158, 186); border-radius: 50%;font-size: 15px;"></div></button>
                     <script  src="script.js"></script>
                     
                   </div>
