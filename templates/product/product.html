@@ -4,11 +4,6 @@
 {% block 'content' %}
 
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,14 +25,14 @@
   </section><!-- End Hero -->
 
 <body>
-<style>
+<!-- <style>
   @import "compass/css3";
 
 * {
   box-sizing: border-box;
 
           }
-}
+
 h1 {
   margin: 10px 0 0;
   text-align: center;
@@ -49,7 +44,6 @@ p {
 input {
   border: 1px solid #b3b2b26b;
   font-size: 12px;
-  margin-top:20px ;
   background-color: #9e9e9e52;
   height: 30px;
   padding: 4px 8px;
@@ -60,7 +54,6 @@ input {
           
   &:focus {
     outline: none;
-    background-color: #cecece;
   }
 }
 button {
@@ -78,20 +71,19 @@ button {
     padding: 4px;
     position: absolute;
     width: 30px;
-    margin-top: 20px;
     position: absolute;
-    left: 800px;
+    left: 710px;
    
           
   }
 }
 
-.sample {
+/* .sample {
   float: left;
   height: 50px;
   margin: 0 8%;
   position: relative;
-  width: 34%;
+  width: 34%; */
   &.one,
   &.two {
     input {
@@ -109,7 +101,7 @@ button {
             background: rgb(255, 186, 186);
             color: #a8a8a8;
             position: absolute;
-            left: 700px;
+            left: 900px;
           
           }
           &.btn-reset {
@@ -156,9 +148,9 @@ button {
       border-right: none;
       transition: all .3s ease-in;
     
-      width: 220px;
+      width: 120px;
       &:focus {
-        width: 300px;
+        width: 220px;
         
         ~ button {
           &.btn-search {
@@ -167,7 +159,7 @@ button {
             color: #cecece;
             left: 220px;
             position: absolute;
-            left: 900px;
+            left: 800px;
           
           }
           &.btn-reset {
@@ -178,12 +170,13 @@ button {
             color: #9c9c9c;
             left: 254px;
             position: absolute;
-            left: 935px;
+            left: 850px;
           
          
         }
       }
     }
+  }
     button {
       &.btn-search {
         background: #bbbbbb;
@@ -269,25 +262,24 @@ button {
   }
 }
 
-</style>
-<div class="sample eight">
+</style> -->
+<!-- <div class="sample eight">
   <input type="text" name="search" placeholder="search">
   <button type="submit" class="btn btn-search">
     <i class="fa fa-search"></i>
   </button>
   <button type="reset" class="btn btn-reset fa fa-times"></button>
 </div>
-  <script src="{% static 'assets/js/jvascript.js' %}"></script>
+  <script src="{% static 'assets/js/jvascript.js' %}"></script> -->
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
-        <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>our products</h2>
+          <p>  the best products</p>
+        </div>
   
-          <div class="section-title">
-            <h2>our products</h2>
-            <p>  the best products</p>
-          </div>
-  
-          <div class="row">
+        <div class="row">
           {% for product in product %}
             <div class="col-lg-4">
               <div class="box" data-aos="zoom-in" data-aos-delay="100">
@@ -295,7 +287,7 @@ button {
                 <img src="{{product.image.url}}" alt="" class="lip">
           
               
-                <style>
+                <!-- <style>
                   .bubbly-button {
                       font-family: "Helvetica", "Arial", sans-serif;
                       display: inline-block;
@@ -381,31 +373,26 @@ button {
                     }
 
 
-                  </style>
+                  </style> -->
 
 
-                      <title>n</title>
+                  
 
                     <!-- partial:index.partial.html -->
-                    <h4><a href="{% url 'product:product_detail' pk=product.id %}">{{product.title}}</a></h4>
-                    <p>{{product.content}}</p>
-                    {% for cat in product.category.all  %}
-                   <p>{{cat.name}}</p>
+                  <h4><a href="{% url 'product:product_detail' pk=product.id %}">{{product.title}}</a></h4>
+                  <p>{{product.content}}</p>
+                  {% for cat in product.category.all  %}
+                  <p>{{cat.name}}</p>
                   {% endfor %}
-                    <a href="{%url 'product:cart' %}" class="bubbly-button">ADD<i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 17px;"></i>&nbsp;<div style="background-color: rgb(241, 158, 186); border-radius: 50%;font-size: 15px;"></div></button>
-                    <script  src="script.js"></script>
+                    <!-- <button class="bubbly-button">ADD<i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 17px;"></i>&nbsp;<div style="background-color: rgb(241, 158, 186); border-radius: 50%;font-size: 15px;"></div></button>
+                    <script  src="script.js"></script> -->
                     
-                  </div>
-                </div>
-              
-              
-             
-  
-            {% endfor %}
-
-          </div>
-  
-        </div> </div>
+                  
+              </div>
+            </div>
+          {% endfor %}
+        </div> 
+      </div>
       </section><!-- End Why Us Section -->
   
     <style>
@@ -515,4 +502,3 @@ button {
 </html>
 
 {% endblock 'content' %}
-
