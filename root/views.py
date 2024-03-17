@@ -15,6 +15,7 @@ class HomeListView(ListView):
     context_object_name = 'product_feature'
     queryset = Product_Feature.objects.filter(status = True)
 
+  
     def get_context_data(self, **kwargs: Any):
         context = super().get_context_data(**kwargs)
         context['special_products'] = Special_Products.objects.filter(status = True)
@@ -41,8 +42,9 @@ class HomeListView(ListView):
 
 class AboutListView(ListView):
     template_name = "root/about.html"
-    context_object_name = 'productt'
-    queryset = Product_Feature.objects.filter(status = True)
+    context_object_name = 'product_feature'
+    queryset= Product_Feature.objects.filter(status=True)
+        
 
 
 
