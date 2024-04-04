@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'accounts',
     'product',
     'order',
+    
 ]
+ADMIN_CSS = {
+    'all': ['css/admin_custom.css'],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
