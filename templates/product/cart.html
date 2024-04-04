@@ -426,7 +426,7 @@ td input.quantity {
 				</td>
 				<td>{{ product.product_object.price }} $</td>
 				<td>
-					<input type="number" class="quantity" value="1" min="1" />
+					<input type="number" class="quantity" value="{{product.quantity}}" min="{{product.quantity}}" />
 					<a href="{{product.quantity}}" class="remove">delete</a>
 				</td>
 				<td class="itemTotal">{{ product.product_object.price }} $</td>
@@ -452,12 +452,13 @@ td input.quantity {
 			
 				</tbody>
 			</table>
-			<a class="cta" href="#">clearcart</a>
+			
       <form method="post">
         {% csrf_token %}
+        <a class="cta" href="#">clearcart</a>
         
     </form>
-    <a href="{% url "order:order" %}" class="cta">Submit payment</a>
+    <a href="{% url 'order:order' %}" class="cta">Submit payment</a>
 		</div><!-- end checkout list -->
 	</div> <!-- End Content -->
 

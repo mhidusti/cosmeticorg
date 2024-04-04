@@ -1,20 +1,18 @@
 from typing import Any
-from django.shortcuts import render , redirect, get_object_or_404, redirect
+from django.shortcuts import render,redirect
 from django.views import View
 from .models import *
 from django.contrib import messages
-from django.views.generic import ListView,TemplateView,DetailView
+from django.views.generic import ListView,TemplateView
 from .forms import ContactUsForm,CommentForm
 
 
 
 
 
-class HomeListView(ListView):
+class HomeListView(TemplateView):
     template_name = "root/index.html"
-    context_object_name = 'product_feature'
-    queryset = Product_Feature.objects.filter(status = True)
-
+   
     def get_context_data(self, **kwargs: Any):
         context = super().get_context_data(**kwargs)
         context['special_products'] = Special_Products.objects.filter(status = True)
@@ -41,8 +39,9 @@ class HomeListView(ListView):
 
 class AboutListView(ListView):
     template_name = "root/about.html"
-    context_object_name = 'productt'
-    queryset = Product_Feature.objects.filter(status = True)
+    context_object_name = 'product_feature'
+    queryset= Product_Feature.objects.filter(status=True)
+        
 
 
 
