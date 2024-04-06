@@ -54,3 +54,6 @@ class CartView(TemplateView):
         cart = Cart(request)
         cart.clear()
         return redirect(request.path_info)
+
+class wishView(TemplateView):
+    template_name = 'product/wish.html'

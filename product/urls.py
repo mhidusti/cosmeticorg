@@ -9,5 +9,6 @@ urlpatterns = [
     path('cart',CartView.as_view(), name='cart'),
     path("search/",ProductView.as_view(),name="product_search"),
     path("category/<str:cat>",ProductView.as_view(),name="product_cat"),
+    path("wish/",wishView.as_view(),name="wish"),
     
 ]
