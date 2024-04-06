@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView,TemplateView
 from .cart import Cart
 from .models import Products,Category
+from .wish import Wish
 
 
 
@@ -36,15 +37,16 @@ class ProductDetailView(DetailView):
     
     def post(self, request, *args, **kwargs):
         cart = Cart(request)
+        wish = Wish(request)
         
         if 'id' in request.POST :
-            product = get_object_or_404(Products, id=request.POST['id'])    
-            cart.delete_from_cart(product)
+            product = get_object_or_404(Products, id=request.POST['id'])
+            wish.add_to_wish_one_quantity(product)
             
         else:
             product = get_object_or_404(Products, id=request.POST['pk'])
             cart.add_to_cart_some_quantity(product)
-
+        
         return redirect(request.path_info)
        
 class CartView(TemplateView):

@@ -421,8 +421,8 @@ td input.quantity {
 							<img src="{% static 'assets/img/medd.png' %}" />
 						</div>
 					</div>
-					<p>{{product.product_object.title}}<br /><span class="itemNum">best material for pro</span></p>
-					<p class="description"> Lorem ipsum dolor sit amet consectetu</p>
+					<p>{{product.product_object.title}}<br /><span class="itemNum">{{product.product_object.content}}</span></p>
+					
 				</td>
 				<td>{{ product.product_object.price }} $</td>
 				<td>
@@ -456,6 +456,7 @@ td input.quantity {
       <form method="post">
         {% csrf_token %}
         <a class="cta" href="#">clearcart</a>
+        <button type="submit">clear</button> 
         
     </form>
     <a href="{% url 'order:order' %}" class="cta">Submit payment</a>

@@ -171,52 +171,25 @@
                             </tr>
                         </thead>
                         <tbody>
+                        {% for product in wish %}
                             <tr>
                                 <td width="45%">
                                     <div class="display-flex align-center">
                                         <div class="img-product">
-                                            <img src="" alt="img\lop.png" class="mCS_img_loaded">
+                                            <img src="{{ product.product_object.image.url }}" alt="img\lop.png" class="mCS_img_loaded">
                                         </div>
                                         <div class="name-product">
-                                            Apple iPad Mini
+                                            {{product.product_object.title}}
                                         </div>
                                     </div>
                                 </td>
-                                <td width="15%" class="price">$110.00</td>
+                                <td width="15%" class="price">${{ product.product_object.price }}</td>
                               
                                 <td width="15%"><button class="round-black-btn small-btn">Add to Cart</button></td>
                                 <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
                             </tr>
-                            <tr>
-                                <td width="45%">
-                                    <div class="display-flex align-center">
-                                        <div class="img-product">
-                                            <img src="" alt="img\lop.png" class="mCS_img_loaded">                                        </div>
-                                        <div class="name-product">
-                                            Apple iPad Mini
-                                        </div>
-                                    </div>
-                                </td>
-                                <td width="15%" class="price">$110.00</td>
-                          
-                                <td width="15%"><button class="round-black-btn small-btn">Add to Cart</button></td>
-                                <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td width="45%">
-                                    <div class="display-flex align-center">
-                                        <div class="img-product">
-                                            <img src="" alt="img\lop.png" class="mCS_img_loaded">                                        </div>
-                                        <div class="name-product">
-                                            Apple iPad Mini
-                                        </div>
-                                    </div>
-                                </td>
-                                <td width="15%" class="price">$110.00</td>
-                               
-                                <td width="15%"><button class="round-black-btn small-btn">Add to Cart</button></td>
-                                <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
-                            </tr>
+                        {% endfor %}
+                           
                         </tbody>
                     </table>
                 </div>
