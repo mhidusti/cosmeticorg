@@ -1,173 +1,158 @@
-<!-- <form method="post" enctype='multipart/form-data'>
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">signup new user</button>
-    {% if messages %}
-        {% for message in messages %}
-            {{message}}
-        {% endfor %}
-    {% endif %}
-</form> 
- -->
- <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins',sans-serif;
-    }
-    html, body{
-      display: grid;
-      height: 100vh;
-      width: 100%;
-      place-items: center;
-      background: linear-gradient(to right, #ebacacb7 0%, #ff9696 100%);
-    }
-    ::selection{
-      background: #ddadad;
-    
-    }
-    .container{
-      background: #fff;
-      max-width: 350px;
-      width: 100%;
-      padding: 25px 30px;
-      border-radius: 5px;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
-    }
-    .container form .title{
-      font-size: 30px;
-      font-weight: 600;
-      margin: 20px 0 10px 0;
-      position: relative;
-    }
-    .container form .title:before{
-      content: '';
-      position: absolute;
-      height: 4px;
-      width: 33px;
-      left: 0px;
-      bottom: 3px;
-      border-radius: 5px;
-      background: linear-gradient(to right, #ebacacb7 0%, #ff9696 100%);
-    }
-    .container form .input-box{
-      width: 100%;
-      height: 45px;
-      margin-top: 25px;
-      position: relative;
-    }
-    .container form .input-box input{
-      width: 100%;
-      height: 100%;
-      outline: none;
-      font-size: 16px;
-      border: none;
-    }
-    .container form .underline::before{
-      content: '';
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background: #919191;
-      left: 0;
-      bottom: 0;
-    }
-    .container form .underline::after{
-      content: '';
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      background: linear-gradient(to right,#ebacacb7 0%, #ff9696 100%);
-      left: 0;
-      bottom: 0;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: all 0.3s ease;
-    }
-    .container form .input-box input:focus ~ .underline::after,
-    .container form .input-box input:valid ~ .underline::after{
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-    .container form .button{
-      margin: 40px 0 20px 0;
-    }
-    .container .input-box input[type="submit"]{
-      background: linear-gradient(to right,#ebacacb7 0%, #ff9696 100%);
-      font-size: 17px;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .container .input-box input[type="submit"]:hover{
-      letter-spacing: 1px;
-      background: linear-gradient(to left, #919191b7 0%, #808080 100%);
-    }
-    .container .option{
-      font-size: 14px;
-      text-align: center;
-    }
-    .container .facebook a,
-    .container .twitter a{
-      display: block;
-      height: 45px;
-      width: 100%;
-      font-size: 15px;
-      text-decoration: none;
-      padding-left: 20px;
-      line-height: 45px;
-      color: #fff;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-    </style>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     <!DOCTYPE html>
     <!-- Created By CodingLab - www.codinglabweb.com -->
     <html lang="en" dir="ltr">
       <head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+          }
+          html, body{
+            display: grid;
+            height: 100vh;
+            width: 100%;
+            place-items: center;
+            background: linear-gradient(to right, #ebacacb7 0%, #ff9696 100%);
+          }
+          ::selection{
+            background: #ddadad;
+          
+          }
+          .container{
+            background: #fff;
+            max-width: 350px;
+            width: 100%;
+            padding: 25px 30px;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+          }
+          .container form .title{
+            font-size: 30px;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+            position: relative;
+          }
+          .container form .title:before{
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 33px;
+            left: 0px;
+            bottom: 3px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #ebacacb7 0%, #ff9696 100%);
+          }
+          .container form .input-box{
+            width: 100%;
+            height: 45px;
+            margin-top: 25px;
+            position: relative;
+          }
+          .container form .input-box input{
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 16px;
+            border: none;
+          }
+          .container form .underline::before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #919191;
+            left: 0;
+            bottom: 0;
+          }
+          .container form .underline::after{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right,#ebacacb7 0%, #ff9696 100%);
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.3s ease;
+          }
+          .container form .input-box input:focus ~ .underline::after,
+          .container form .input-box input:valid ~ .underline::after{
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+          .container form .button{
+            margin: 40px 0 20px 0;
+          }
+          .container .input-box input[type="submit"]{
+            background: linear-gradient(to right,#ebacacb7 0%, #ff9696 100%);
+            font-size: 17px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          .container .input-box input[type="submit"]:hover{
+            letter-spacing: 1px;
+            background: linear-gradient(to left, #919191b7 0%, #808080 100%);
+          }
+          .container .option{
+            font-size: 14px;
+            text-align: center;
+          }
+          .container .facebook a,
+          .container .twitter a{
+            display: block;
+            height: 45px;
+            width: 100%;
+            font-size: 15px;
+            text-decoration: none;
+            padding-left: 20px;
+            line-height: 45px;
+            color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+          }
+          </style>
+          
+          
         <meta charset="UTF-8">
-        <title> login </title>
-        <link rel="stylesheet" href="style.css">
+        <title> signup </title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
       <body>
         <div class="container">
-          <form action="#">
-            <div class="title">create new account</div>
-            <div class="input-box underline">
-              <input type="text" placeholder="Enter Your Email" required>
+        <form action="#" method="post">
+          {% csrf_token %}
+             <div class="title">create new account</div>
+             <div class="input-box underline">
+              <input type="email" name="email" placeholder="Enter Your Email" required>
               <div class="underline"></div>
             </div>
             <div class="input-box underline">
-                <input type="text" placeholder="Enter Your Username" required>
+                <input type="text" name="username" placeholder="Enter Your Username" required>
                 <div class="underline"></div>
-              </div>
+            </div>
             <div class="input-box">
-              <input type="password" placeholder="Enter Your Password" required>
+              <input type="password" name="password1" placeholder="Enter Your Password" required>
               <div class="underline"></div>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="again to confrim Password" required>
+                <input type="password" name="password2" placeholder="again to confrim Password" required>
                 <div class="underline"></div>
-              </div>
+            </div>  
             <div class="input-box button">
               <input type="submit" name="" value="Continue">
             </div>
+        </form>
         <div>
-            <a href={% url 'accounts:login' %}>do you have an account?</a>
+            <a href="{% url 'accounts:login' %}">do you have an account?</a>
         </div>
       </body>
     </html>
