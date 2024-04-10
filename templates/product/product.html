@@ -26,125 +26,63 @@
 
 <body>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
-
-
-  .search {
+  .search-box {
     position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background: rgb(255, 166, 184);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #dfb5b5af;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+.search-btn {
+    color: rgb(240, 170, 170);
+    float: right;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    transition: all 1s;
-    z-index: 4;
-    box-shadow: 0 0 25px 0 rgba(255, 216, 216, 0.4);
-    box-shadow: 0 0 25px 0 crimson;
-    &:hover {
-      cursor: pointer;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      margin: auto;
-      top: 22px;
-      right: 0;
-      bottom: 0;
-      left: 22px;
-      width: 12px;
-      height: 2px;
-      background: white;
-      transform: rotate(45deg);
-      transition: all .5s;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      margin: auto;
-      top: -5px;
-      right: 0;
-      bottom: 0;
-      left: -5px;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      border: 2px solid white;
-      transition: all .5s;
-    }
-  
-  input {
-    font-family: 'Inconsolata', monospace;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    outline: none;
+    background-color: #7c7c7c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s all;
+    text-decoration: none;
+}
+.search-text {
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    background: #ffb9b9;
-    color: white;
-    text-shadow: 0 0 10px rgb(255, 165, 183);
-    padding: 0 80px 0 20px;
-    border-radius: 30px;
-    box-shadow: 0 0 25px 0 rgb(255, 193, 205),
-                0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
-    transition: all 1s;
-    opacity: 0;
-    z-index: 5;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-    &:hover {
-      cursor: pointer;
-    }
-    &:focus {
-      width: 300px;
-      opacity: 1;
-      cursor: text;
-    }
-    &:focus ~ .search {
-      right: -250px;
-      background: #ffb9b9;
-      z-index: 6;
-      &::before {
-        top: 0;
-        left: 0;
-        width: 25px;
-      }
-      &::after {
-        top: 0;
-        left: 0;
-        width: 25px;
-        height: 2px;
-        border: none;
-        background: white;
-        border-radius: 0%;
-        transform: rotate(-45deg);
-      }
-    }
-    &::placeholder {
-      color: white;
-      opacity: 0.5;
-      font-weight: bolder;
-    }
-  }
-  }
-
-
-</style> 
-<div class="container">
-  <input type="text" placeholder="Search..." >
-  <div class="search"></div>
-</div>
-
+    background: none;
+    outline: none;
+    padding: 0;
+    color: rgba(8, 8, 8, 0.37);
+    font-size: 1em;
+    line-height: 40px;
+    width: 0;
+    transition: .5s all;
+}
+.search-box:hover > .search-text {
+    width: 250px;
+    text-transform: capitalize;
+}
+.search-box:hover > .search-btn {
+    background-color: rgba(58, 58, 58, 0.521);
+}
+</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <title>Search Box</title>
+</head>
+<body>
+ <div class="search-box">
+     <input class="search-text" type="text" placeholder="Search...">
+     <a href="#" class="search-btn">
+         <i class="fas fa-search"></i>
+     </a>
+ </div>
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
       <div class="container" data-aos="fade-up">
