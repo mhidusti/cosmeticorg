@@ -41,7 +41,7 @@ class ProductDetailView(DetailView):
         
         if 'id' in request.POST :
             product = get_object_or_404(Products, id=request.POST['id'])
-            wish.add_to_wish_one_quantity(product)
+            wish.add_to_wish_some_quantity(product)
             
         else:
             product = get_object_or_404(Products, id=request.POST['pk'])
@@ -59,3 +59,7 @@ class CartView(TemplateView):
 
 class wishView(TemplateView):
     template_name = 'product/wish.html'
+
+    def post(self, request, *args, **kwargs):
+        post_detail = ProductDetailView()
+        return post_detail.post(request,*args,**kwargs)
