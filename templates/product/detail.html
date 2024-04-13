@@ -8,8 +8,8 @@
             <div class="container" data-aos="fade-up">
       
               <div class="section-title">
-                <h2>The best packs with the best features for you</h2>
-                <p>pack cosmetic for you</p>
+                <h2>The detail of your selected product</h2>
+                <p>cosmetic for you</p>
               </div>
   
           <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -34,121 +34,129 @@
                     </ul>
                     <p>
                       
+<style>
+  .dokme{ 
+    background-image: linear-gradient(315deg, #f0c4c4 0%, #c5adadd3 74%);
+                 
+    position: absolute;
+    top: 50%;
+    left: 56%;
+                
+    transform: translate(-50%, -50%);
+    width: 150px; height: 50px;
+    box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.5);}                 
+</style>
+      <form action="" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="id" value="{{product.id}}"> 
+      <button type="submit"  class="dokme"  ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#ff4ad8" class="bi bi-hearts" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+      </svg></button></form>
+      </div>
                     </p>
+                    <style>
+                      /* 8 */
+                  .btn-8 {
+                    background-color: #ffcaca;
+                    position: absolute;
+                    right: 499px;
+                    bottom: 130px;
+                   background-image: linear-gradient(315deg, #f0c4c4 0%, #c5adadd3 74%);
+                    line-height: 42px;
+                    padding: 0;
+                    border: nonepx;
+                    color: #535353d3; 
+                    width: 150px; height: 50px;
+                   
+                  }
+                  .btn-8 span {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  
+                  }
+                  .btn-8:before,
+                  .btn-8:after {
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    bottom: 0;
+                    background: #cc9b9b;
+                    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+                      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+                    transition: all 0.3s ease;
+                  }
+                  .btn-8:before{
+                     height: 0%;
+                     width: 2px;
+                  }
+                  .btn-8:after {
+                    width: 0%;
+                    height: 2px;
+                  }
+                  .btn-8:hover:before {
+                    height: 100%;
+                  }
+                  .btn-8:hover:after {
+                    width: 100%;
+                  }
+                  .btn-8:hover{
+                    background: transparent;
+                  }
+                  .btn-8 span:hover{
+                    color: #eba8a8;
+                  }
+                  .btn-8 span:before,
+                  .btn-8 span:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    background: #f8b9b9;
+                    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+                      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+                    transition: all 0.3s ease;
+                  }
+                  .btn-8 span:before {
+                    width: 2px;
+                    height: 0%;
+                  }
+                  .btn-8 span:after {
+                    height: 2px;
+                    width: 0%;
+                  }
+                  .btn-8 span:hover:before {
+                    height: 100%;
+                  }
+                  .btn-8 span:hover:after {
+                    width: 100%;
+                  }
+                    
+                  </style>
+                    <form method="post">
+                      {% csrf_token %}
+                      <input type="hidden" name="pk" value="{{product.id}}"> 
+                      <button type="submit" class="custom-btn btn-8" ><span>ADD \ DEL <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 15px;"></i></span></button>
+                    </form>
+                              </div>
+                              <div class="swiper-pagination"></div>
+                            </div>
                   </div>
                 </div>
 
 
 
-<style>
-    /* 8 */
-.btn-8 {
-  background-color: #ffcaca;
-  position: absolute;
-  right: 490px;
-  bottom: 70px;
- background-image: linear-gradient(315deg, #f0c4c4 0%, #c5adadd3 74%);
-  line-height: 42px;
-  padding: 0;
-  border: nonepx;
-  color: #535353d3; 
-  width: 150px; height: 50px;
- 
-}
-.btn-8 span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
 
-}
-.btn-8:before,
-.btn-8:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  bottom: 0;
-  background: #cc9b9b;
-  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.5),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
-  transition: all 0.3s ease;
-}
-.btn-8:before{
-   height: 0%;
-   width: 2px;
-}
-.btn-8:after {
-  width: 0%;
-  height: 2px;
-}
-.btn-8:hover:before {
-  height: 100%;
-}
-.btn-8:hover:after {
-  width: 100%;
-}
-.btn-8:hover{
-  background: transparent;
-}
-.btn-8 span:hover{
-  color: #eba8a8;
-}
-.btn-8 span:before,
-.btn-8 span:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  background: #f8b9b9;
-  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.5),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
-  transition: all 0.3s ease;
-}
-.btn-8 span:before {
-  width: 2px;
-  height: 0%;
-}
-.btn-8 span:after {
-  height: 2px;
-  width: 0%;
-}
-.btn-8 span:hover:before {
-  height: 100%;
-}
-.btn-8 span:hover:after {
-  width: 100%;
-}
-  
-</style>
-  <form method="post">
-    {% csrf_token %}
-    <input type="hidden" name="pk" value="{{product.id}}"> 
-    <button type="submit" class="custom-btn btn-8" ><span>ADD \ DEL <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 15px;"></i></span></button>
-  </form>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-<style>
-.love{ 
-  background-color: #ffcaca;
-  position: absolute;
-  right: 380px;
-  bottom: 70px;
-  width: 100px; height: 50px;
-  box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.5);
 
-}
-</style>
-          <form action="" method="post">
-            {% csrf_token %}
-            <input type="hidden" name="id" value="{{product.id}}"> 
-            <button type="submit"  ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#ff4ad8" class="bi bi-hearts" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
-          </svg></button></form>
+
+
+
+
       </section><!-- End Events Section -->
 </body>
 </html>

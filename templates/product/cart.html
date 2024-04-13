@@ -384,6 +384,18 @@ td input.quantity {
   text-align: center;
   text-transform: uppercase;
 }
+.b1{
+  background: #ffadad;
+  border: #ffadad;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Vazir";
+}
+.b1 :hover{
+  background-color: #ff8d8d;
+}
 
 	</style>
 	<div class="content">
@@ -455,11 +467,12 @@ td input.quantity {
 			
       <form method="post">
         {% csrf_token %}
-        <a class="cta" href="#">clearcart</a>
-        <button type="submit">clear</button> 
+      <a class="cta" >
+        <button type="submit" class="b1"  >clear</button></a> 
+        <a href="{% url 'order:order' %}" class="cta">Submit payment</a>
         
     </form>
-    <a href="{% url 'order:order' %}" class="cta">Submit payment</a>
+   
 		</div><!-- end checkout list -->
 	</div> <!-- End Content -->
 
