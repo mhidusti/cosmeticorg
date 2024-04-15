@@ -186,7 +186,7 @@
                                 <td width="15%" class="price">${{ product.product_object.price }}</td>
                               <form method="post" >
                                 {% csrf_token %}
-                                <input type="hidden" name="pk" value="{{product.id}}"> 
+                                <input type="hidden" name="pk" value="{{product.product_object.id}}"> 
                                 <td width="15%"><button class="round-black-btn small-btn" type="submit" >Add to Cart</button></td></form>
                                 <td width="10%" class="text-center"><a href="#" class="trash-icon"><i class="far fa-trash-alt"></i></a></td>
                             </tr>

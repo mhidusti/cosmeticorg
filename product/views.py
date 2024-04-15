@@ -61,5 +61,17 @@ class wishView(TemplateView):
     template_name = 'product/wish.html'
 
     def post(self, request, *args, **kwargs):
-        post_detail = ProductDetailView()
-        return post_detail.post(request,*args,**kwargs)
+        cart = Cart(request)
+        wish = Wish(request)
+        
+        if 'pk' in request.POST :
+            product = get_object_or_404(Products, id=request.POST['pk'])
+            cart.add_to_cart_some_quantity(product)
+            
+        else:
+            wish=Wish(request)
+            wish.clear()
+            
+        
+        return redirect(request.path_info)
+       
